@@ -1,0 +1,30 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Legacy files (optional, but keep if you want to keep the repo clean)
+# legacy/
+# *.jsx (if you moved them all to src)
+# content.js (if moved to src)
+# Duck Studios Sales Landing.html (if you want to keep only the new index.html)

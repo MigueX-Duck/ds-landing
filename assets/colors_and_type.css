@@ -1,0 +1,268 @@
+/* ============================================================
+   DUCK STUDIOS — Design Tokens
+   Brand: Duck Studios (duckstudios.net)
+   Updated: May 2026
+   ============================================================ */
+
+/* Montserrat is loaded from Google Fonts — see <link> in each HTML.
+   If self-hosting, drop the .ttf/.woff2 files into ./fonts/ and
+   uncomment the @font-face block at the bottom of this file. */
+
+:root {
+  /* ----- BRAND COLORS (from Brand Book) ----- */
+  --ds-yellow:        #FFBC00;   /* Primary brand accent. CTAs, logo bg, highlights. */
+  --ds-yellow-hover:  #F0AE00;   /* Yellow pressed/hover (computed darker step). */
+  --ds-yellow-soft:   #FFD86B;   /* Lighter yellow for highlights, glows. */
+  --ds-black:         #000000;   /* Backgrounds, contrast, hierarchy. */
+  --ds-white:         #FFFFFF;   /* Text on dark, breathing room. */
+  --ds-blue:          #009EFF;   /* Digital/interactive accent. */
+  --ds-blue-soft:     #6FC8FF;   /* Lighter blue for fills & glows. */
+  --ds-pastel-green:  #B3F4DC;   /* Auxiliary accent / soft backgrounds. */
+  --ds-cream:         #F5F0EB;   /* Light/long-form documentation surface. */
+
+  /* ----- NEUTRALS (used across the site, matched to live UI) ----- */
+  --ds-gray-50:   #F5F5F5;
+  --ds-gray-100:  #E5E7EB;
+  --ds-gray-200:  #D1D5DB;
+  --ds-gray-300:  #9CA3AF;   /* gray-400 in tailwind = labels on dark */
+  --ds-gray-400:  #6B7280;
+  --ds-gray-500:  #4B5563;
+  --ds-gray-600:  #374151;   /* borders on dark cards (gray-700) */
+  --ds-gray-700:  #1F2937;   /* gray-800 — card surfaces */
+  --ds-gray-800:  #111827;   /* gray-900 — deep card surfaces */
+  --ds-gray-900:  #0B0F1A;   /* near-black */
+
+  /* ----- SEMANTIC COLORS ----- */
+  --color-bg:           var(--ds-black);
+  --color-bg-elevated:  rgba(31, 41, 55, 0.9);     /* gray-800/90 — cards on dark */
+  --color-bg-cream:     var(--ds-cream);            /* docs/light surface */
+  --color-fg:           var(--ds-white);
+  --color-fg-muted:     #D1D5DB;                    /* gray-300 body copy */
+  --color-fg-subtle:    #9CA3AF;                    /* gray-400 captions */
+  --color-fg-faint:     #6B7280;                    /* gray-500 footnotes */
+  --color-fg-on-cream:  #111827;                    /* gray-900 on cream */
+  --color-accent:       var(--ds-yellow);
+  --color-accent-fg:    var(--ds-black);            /* text on yellow */
+  --color-link:         var(--ds-yellow);
+  --color-link-hover:   var(--ds-yellow-soft);
+  --color-border:       rgba(55, 65, 81, 0.5);     /* gray-700/50 */
+  --color-border-soft:  rgba(75, 85, 99, 0.5);     /* gray-600/50 */
+  --color-ring:         var(--ds-yellow);
+
+  /* ----- SIGNATURE GRADIENT ----- */
+  /* Hero backdrop: Black → Deep Blue → Amber/Yellow.
+     The live site layers radial blobs over near-black; this is the
+     literal three-stop gradient from the brand book. */
+  --ds-gradient-hero: linear-gradient(135deg,
+    #000000 0%,
+    #001a2e 25%,
+    #003a66 45%,
+    #009EFF 65%,
+    #FFBC00 100%);
+  --ds-gradient-hero-radial: radial-gradient(ellipse at bottom right,
+    #FFBC00 0%, #009EFF 35%, #001a2e 70%, #000000 100%);
+  --ds-gradient-yellow:   linear-gradient(135deg, #FFD86B 0%, #FFBC00 50%, #F0AE00 100%);
+  --ds-gradient-yellow-cta: linear-gradient(135deg, #FFC933 0%, #FFBC00 100%);
+  --ds-gradient-blue:     linear-gradient(135deg, #6FC8FF 0%, #009EFF 100%);
+  --ds-gradient-card:     linear-gradient(135deg, rgba(31,41,55,0.9) 0%, rgba(17,24,39,0.9) 100%);
+
+  /* ----- TYPOGRAPHY ----- */
+  --font-display:  "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  --font-body:     "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  --font-mono:     ui-monospace, "JetBrains Mono", "Fira Code", Menlo, monospace;
+
+  /* Weights — Montserrat ships the full range Thin → Black */
+  --weight-thin:        100;
+  --weight-light:       300;
+  --weight-regular:     400;
+  --weight-medium:      500;
+  --weight-semibold:    600;
+  --weight-bold:        700;
+  --weight-extrabold:   800;
+  --weight-black:       900;
+
+  /* Type scale (px, mobile-first; clamp() for fluid display) */
+  --text-xs:    12px;
+  --text-sm:    14px;
+  --text-base:  16px;
+  --text-lg:    18px;
+  --text-xl:    20px;
+  --text-2xl:   24px;
+  --text-3xl:   30px;
+  --text-4xl:   36px;
+  --text-5xl:   48px;
+  --text-6xl:   60px;
+  --text-7xl:   72px;
+  --text-8xl:   96px;
+
+  --leading-tight:    1.05;
+  --leading-snug:     1.2;
+  --leading-normal:   1.5;
+  --leading-relaxed:  1.65;
+
+  --tracking-tight:   -0.02em;
+  --tracking-normal:  0;
+  --tracking-wide:    0.08em;
+  --tracking-widest:  0.18em;   /* for labels / "STUDIOS" wordmark */
+
+  /* ----- SPACING ----- */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  /* ----- RADII ----- */
+  --radius-sm:    6px;
+  --radius-md:    10px;
+  --radius-lg:    16px;     /* most cards */
+  --radius-xl:    20px;
+  --radius-2xl:   24px;     /* hero cards */
+  --radius-3xl:   32px;
+  --radius-pill:  9999px;   /* badges, CTA pills */
+
+  /* ----- SHADOWS / ELEVATION ----- */
+  --shadow-sm:        0 1px 2px rgba(0, 0, 0, 0.25);
+  --shadow-md:        0 4px 12px rgba(0, 0, 0, 0.35);
+  --shadow-lg:        0 12px 30px rgba(0, 0, 0, 0.45);
+  --shadow-xl:        0 24px 50px rgba(0, 0, 0, 0.55);
+  --shadow-2xl:       0 40px 80px rgba(0, 0, 0, 0.55);
+  --shadow-yellow:    0 20px 40px rgba(255, 188, 0, 0.25);
+  --shadow-yellow-sm: 0 8px 20px rgba(255, 188, 0, 0.18);
+  --shadow-blue:      0 20px 40px rgba(0, 158, 255, 0.20);
+
+  /* ----- MOTION ----- */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast:    150ms;
+  --dur-base:    250ms;
+  --dur-slow:    500ms;
+  --dur-slower:  800ms;
+
+  /* ----- LAYOUT ----- */
+  --container-max: 1280px;   /* max-w-7xl */
+  --container-pad: 24px;
+}
+
+/* ============================================================
+   SEMANTIC TYPE STYLES
+   Apply with classes or copy declarations into component CSS.
+   ============================================================ */
+
+.ds-h1, h1 {
+  font-family: var(--font-display);
+  font-weight: var(--weight-black);
+  font-size: clamp(40px, 7vw, 96px);
+  line-height: 0.9;
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-fg);
+  text-wrap: balance;
+}
+
+.ds-h2, h2 {
+  font-family: var(--font-display);
+  font-weight: var(--weight-black);
+  font-size: clamp(32px, 5vw, 72px);
+  line-height: 1.05;
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-fg);
+  text-wrap: balance;
+}
+
+.ds-h3, h3 {
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-2xl);
+  line-height: var(--leading-snug);
+  color: var(--color-fg);
+}
+
+.ds-h4, h4 {
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-xl);
+  line-height: var(--leading-snug);
+  color: var(--color-fg);
+}
+
+.ds-display {
+  font-family: var(--font-display);
+  font-weight: var(--weight-black);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-tight);
+  line-height: 0.9;
+}
+
+.ds-eyebrow, .ds-label {
+  font-family: var(--font-display);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-widest);
+  color: var(--color-fg-subtle);
+}
+
+.ds-body, p {
+  font-family: var(--font-body);
+  font-weight: var(--weight-regular);
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--color-fg-muted);
+  text-wrap: pretty;
+}
+
+.ds-body-sm {
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+}
+
+.ds-lead {
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: var(--weight-light);
+  line-height: var(--leading-relaxed);
+  color: var(--color-fg-muted);
+}
+
+.ds-italic-accent {
+  font-style: italic;
+  font-weight: var(--weight-light);
+  color: var(--color-fg-subtle);
+}
+
+.ds-stat-number {
+  font-family: var(--font-display);
+  font-weight: var(--weight-black);
+  font-size: clamp(48px, 8vw, 96px);
+  line-height: 1;
+  color: var(--color-fg);
+  letter-spacing: var(--tracking-tight);
+}
+
+.ds-step-number {
+  font-family: var(--font-display);
+  font-weight: var(--weight-black);
+  font-size: var(--text-lg);
+  color: var(--color-accent-fg);
+  letter-spacing: var(--tracking-tight);
+}
+
+.ds-mono, code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+/* ============================================================
+   SELF-HOSTED MONTSERRAT (optional)
+   To self-host, drop a Montserrat variable font into ./fonts/
+   and add an @font-face block with src pointing at it.
+   See README for details.
+   ============================================================ */
