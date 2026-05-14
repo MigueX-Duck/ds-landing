@@ -9,30 +9,53 @@ html, body { margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
   background: #000000;
-  background-image:
-    /* Top of page — yellow + blue with a hint of orange */
-    radial-gradient(circle at 80% 3%, rgba(255,188,0,0.12) 0%, transparent 14%),
-    radial-gradient(circle at 12% 8%, rgba(0,158,255,0.16) 0%, transparent 14%),
-    radial-gradient(circle at 55% 14%, rgba(255,122,26,0.08) 0%, transparent 11%),
-    /* Mid-upper — purple + light blue */
-    radial-gradient(circle at 90% 22%, rgba(138,58,255,0.14) 0%, transparent 13%),
-    radial-gradient(circle at 6% 30%, rgba(111,200,255,0.10) 0%, transparent 13%),
-    /* Middle — yellow / orange / blue rhythm */
-    radial-gradient(circle at 88% 40%, rgba(255,188,0,0.07) 0%, transparent 12%),
-    radial-gradient(circle at 14% 48%, rgba(255,122,26,0.09) 0%, transparent 12%),
-    radial-gradient(circle at 72% 54%, rgba(0,158,255,0.09) 0%, transparent 12%),
-    /* Mid-lower — purple + a touch of turquoise */
-    radial-gradient(circle at 10% 64%, rgba(94,234,212,0.05) 0%, transparent 10%),
-    radial-gradient(circle at 88% 70%, rgba(138,58,255,0.11) 0%, transparent 12%),
-    /* Lower — light blue + warm finale */
-    radial-gradient(circle at 18% 82%, rgba(111,200,255,0.08) 0%, transparent 12%),
-    radial-gradient(circle at 78% 88%, rgba(255,122,26,0.10) 0%, transparent 12%),
-    radial-gradient(circle at 50% 97%, rgba(255,188,0,0.14) 0%, transparent 15%);
   color: var(--ds-white);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+}
+
+/* ----- Background ambient layer (Premium V2) ----- */
+.ds-ambient {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+.ds-ambient__base {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 80% 100%, rgba(255,188,0,.18) 0%, rgba(0,158,255,.10) 35%, rgba(0,26,46,.4) 70%, rgba(0,0,0,1) 100%);
+}
+.ds-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: .35;
+  animation: ds-blob 8s ease-in-out infinite;
+}
+.ds-blob--yellow { background: radial-gradient(circle, #FFBC00, transparent 70%); width: 360px; height: 360px; top: 8%; left: 6%; }
+.ds-blob--blue   { background: radial-gradient(circle, #009EFF, transparent 70%); width: 420px; height: 420px; top: 28%; right: 10%; animation-delay: 2s; }
+.ds-blob--green  { background: radial-gradient(circle, #B3F4DC, transparent 70%); width: 320px; height: 320px; bottom: 12%; left: 22%; animation-delay: 4s; }
+.ds-blob--purple { background: radial-gradient(circle, #6B46C1, transparent 70%); width: 380px; height: 380px; bottom: 6%; right: 8%; opacity: .18; animation-delay: 6s; }
+@keyframes ds-blob {
+  0%, 100% { transform: translate(0,0) scale(1); opacity: .3; }
+  50%      { transform: translate(20px,-30px) scale(1.15); opacity: .55; }
+}
+
+.ds-particle {
+  position: absolute;
+  width: 3px; height: 3px;
+  background: #fff;
+  border-radius: 50%;
+  opacity: .35;
+  animation: ds-twinkle 3.5s ease-in-out infinite;
+}
+@keyframes ds-twinkle {
+  0%, 100% { opacity: .15; transform: scale(.6); }
+  50%      { opacity: .55; transform: scale(1.1); }
 }
 
 img { max-width: 100%; display: block; }
@@ -207,30 +230,7 @@ button { font-family: inherit; cursor: pointer; }
   padding: 140px 0 80px;
   background: transparent;
 }
-.hero__ambient {
-  position: absolute; inset: 0; overflow: hidden; pointer-events: none;
-}
-.blob {
-  position: absolute; border-radius: 50%; filter: blur(80px);
-  opacity: 0.5;
-  animation: blob 8s ease-in-out infinite;
-}
-.blob--yellow { width: 500px; height: 500px; background: var(--ds-yellow); top: 10%; right: -120px; animation-delay: 0s; }
-.blob--blue { width: 600px; height: 600px; background: var(--ds-blue); bottom: -150px; left: -120px; animation-delay: 1.5s; }
-.blob--green { width: 380px; height: 380px; background: #FF7A1A; top: 40%; left: 35%; animation-delay: 3s; opacity: 0.32; }
-@keyframes blob {
-  0%, 100% { transform: scale(1) translate(0,0); opacity: 0.35; }
-  50% { transform: scale(1.2) translate(20px, -20px); opacity: 0.55; }
-}
-.particle {
-  position: absolute; width: 4px; height: 4px; border-radius: 50%;
-  background: var(--ds-white); opacity: 0.6;
-  animation: drift 6s ease-in-out infinite;
-}
-@keyframes drift {
-  0%, 100% { transform: translateY(0); opacity: 0.2; }
-  50% { transform: translateY(-30px); opacity: 0.8; }
-}
+/* (Old ambient styles removed in favor of global .ds-ambient) */
 
 .hero__inner {
   position: relative; z-index: 2;

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Nav, ScrollProgress, Hero, WhoWeAre, WhatYouGet } from './components/SectionsA';
+import { Ambient } from './components/Common';
 import { Portfolio, Stories, Dashboards, Social, Risk, Closing, Lightbox } from './components/SectionsB';
 import { Tweaks } from './components/Tweaks';
 
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <>
+      <Ambient />
       <ScrollProgress/>
       <Nav lang={lang} setLang={setLang} scrolled={scrolled}/>
       <Hero lang={lang}/>

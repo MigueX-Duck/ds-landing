@@ -54,3 +54,28 @@ export function CounterOnScroll({ target, suffix = "+" }) {
   }, []);
   return <span ref={ref}><Counter target={target} suffix={suffix} trigger={trig}/></span>;
 }
+
+export function Ambient() {
+  const particles = [
+    { top: '12%', left: '18%', delay: 0 },
+    { top: '22%', left: '78%', delay: 0.8 },
+    { top: '48%', left: '34%', delay: 1.6 },
+    { top: '62%', left: '88%', delay: 0.4 },
+    { top: '78%', left: '12%', delay: 2.2 },
+    { top: '36%', left: '54%', delay: 1.2 },
+    { top: '88%', left: '64%', delay: 1.9 },
+    { top: '14%', left: '46%', delay: 2.8 },
+  ];
+  return (
+    <div className="ds-ambient" aria-hidden="true">
+      <div className="ds-ambient__base" />
+      <div className="ds-blob ds-blob--yellow" />
+      <div className="ds-blob ds-blob--blue" />
+      <div className="ds-blob ds-blob--green" />
+      <div className="ds-blob ds-blob--purple" />
+      {particles.map((p, i) => (
+        <span key={i} className="ds-particle" style={{ top: p.top, left: p.left, animationDelay: `${p.delay}s` }} />
+      ))}
+    </div>
+  );
+}

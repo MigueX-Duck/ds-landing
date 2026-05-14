@@ -46,29 +46,8 @@ export function Hero({ lang }) {
   const [trig, setTrig] = React.useState(false);
   React.useEffect(() => {const t = setTimeout(() => setTrig(true), 350);return () => clearTimeout(t);}, []);
 
-  const particles = [
-  { top: '12%', left: '18%', d: 0 },
-  { top: '22%', left: '78%', d: 0.8 },
-  { top: '48%', left: '34%', d: 1.6 },
-  { top: '62%', left: '88%', d: 0.4 },
-  { top: '78%', left: '12%', d: 2.2 },
-  { top: '36%', left: '54%', d: 1.2 },
-  { top: '88%', left: '64%', d: 1.9 },
-  { top: '14%', left: '46%', d: 2.8 },
-  { top: '30%', left: '8%', d: 0.6 },
-  { top: '70%', left: '40%', d: 1.4 }];
-
   return (
     <section className="hero" id="top">
-      <div className="hero__ambient" aria-hidden="true">
-        <div className="blob blob--yellow" />
-        <div className="blob blob--blue" />
-        <div className="blob blob--green" />
-        {particles.map((p, i) =>
-        <span key={i} className="particle" style={{ top: p.top, left: p.left, animationDelay: p.d + 's' }} />
-        )}
-      </div>
-
       <div className="hero__inner">
         <div className="hero__eyebrow">
           <span className="dot"></span>
