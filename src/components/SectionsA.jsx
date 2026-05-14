@@ -8,7 +8,7 @@ export function Nav({ lang, setLang, scrolled }) {
   return (
     <nav className={"nav" + (scrolled ? " nav--scrolled" : "")}>
       <a href="#top" className="nav__brand">
-        <img src="assets/logo-isotipo.png" alt="Duck Studios" />
+        <img src="/assets/logo-isotipo.png" alt="Duck Studios" />
         <span className="nav__wordmark">Duck<span>.</span>Studios</span>
       </a>
       <ul className="nav__links">
@@ -115,9 +115,9 @@ export function Hero({ lang }) {
 export function WhoWeAre({ lang }) {
   const ref = useReveal();
   const team = [
-  { initials: "RB", img: "assets/team/rachel-basulto.webp", name: "Rachel Basulto", role: { en: "Founder & CEO", es: "Fundadora & CEO" } },
-  { initials: "VL", img: "assets/team/valeria-leiva.webp", name: "Valeria Leiva", role: { en: "Creative Director", es: "Directora Creativa" } },
-  { initials: "PD", img: "assets/team/pablo-diaz.webp", name: "Pablo Díaz", role: { en: "Head of Creative Strategy", es: "Head of Creative Strategy" } }];
+  { initials: "RB", img: "/assets/team/rachel-basulto.webp", name: "Rachel Basulto", role: { en: "Founder & CEO", es: "Fundadora & CEO" } },
+  { initials: "VL", img: "/assets/team/valeria-leiva.webp", name: "Valeria Leiva", role: { en: "Creative Director", es: "Directora Creativa" } },
+  { initials: "PD", img: "/assets/team/pablo-diaz.webp", name: "Pablo Díaz", role: { en: "Head of Creative Strategy", es: "Head of Creative Strategy" } }];
 
   return (
     <section className="section who section--black" id="team">

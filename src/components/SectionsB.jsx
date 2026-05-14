@@ -194,9 +194,9 @@ export function Social({ lang }) {
   ];
 
   const logos = [
-    { src: 'assets/clients/bac.png' }, { src: 'assets/clients/conuna.png' },
-    { src: 'assets/clients/innova.png' }, { src: 'assets/clients/pittier.png' },
-    { src: 'assets/clients/stattoos.png' }, { src: 'assets/clients/umifem.png' },
+    { src: '/assets/clients/bac.png' }, { src: '/assets/clients/conuna.png' },
+    { src: '/assets/clients/innova.png' }, { src: '/assets/clients/pittier.png' },
+    { src: '/assets/clients/stattoos.png' }, { src: '/assets/clients/umifem.png' },
     { text: "Hi-Tec" }, { text: "Nordica" }, { text: "Vela" }, { text: "Volt" },
     { text: "Cobre" }, { text: "Lumen" }, { text: "Forja" }, { text: "Astra" },
     { text: "Cerro" }
@@ -276,7 +276,7 @@ export function Closing({ lang }) {
 
         <div className="closing__card">
           <div className="closing__photo">
-            <img src="assets/team/rachel-basulto.webp" alt="Rache Vargas" />
+            <img src="/assets/team/rachel-basulto.webp" alt="Rache Vargas" />
           </div>
           <div>
             <h3 className="closing__name">Rache Vargas</h3>

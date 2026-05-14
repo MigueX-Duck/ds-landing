@@ -2,7 +2,7 @@
    Duck Studios — Sales Landing Page
    ============================================================ */
 
-@import url("assets/colors_and_type.css");
+@import url("/assets/colors_and_type.css");
 
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
