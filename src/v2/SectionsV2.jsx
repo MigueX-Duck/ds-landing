@@ -96,17 +96,21 @@ export function Hero({ onBookClick, onExploreClick }) {
 
 export function LogoTicker() {
   const clients = [
-    '/assets/clients/bac.png',
-    '/assets/clients/conuna.png',
-    '/assets/clients/innova.png',
-    '/assets/clients/pittier.png',
-    '/assets/clients/stattoos.png',
-    '/assets/clients/umifem.png',
+    '/assets/clients/dds.png',
+    '/assets/clients/jbs_new.png',
+    '/assets/clients/hitec_new.png',
+    '/assets/clients/fib_new.png',
     '/assets/clients/pepes4.png',
+    '/assets/clients/pittier.png',
     '/assets/clients/prada1.png',
     '/assets/clients/prada2.png',
-    '/assets/clients/Logo-blanco-conuna.png',
+    '/assets/clients/stattoos.png',
+    '/assets/clients/umifem.png',
+    '/assets/clients/bac_new.png',
+    '/assets/clients/va_new.png',
+    '/assets/clients/conuna.png',
     '/assets/clients/lumin.avif',
+    '/assets/clients/rest_new.png',
   ];
   const all = [...clients, ...clients, ...clients];
   return (

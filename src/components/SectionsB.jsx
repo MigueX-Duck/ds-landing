@@ -5,15 +5,23 @@ import { useReveal, CounterOnScroll } from './Common';
 
 const PORTFOLIO = [
   { id: 'p1', cat: 'av', label: 'Stattoos · Brand Film', art: 'art-1', span: 'tall' },
-  { id: 'p2', cat: 'design', label: 'Coruña · Identity', art: 'art-2' },
+  { id: 'p2', cat: 'design', label: 'Coruña · Identity', img: '/assets/portfolio/diseno/design-1.jpg' },
   { id: 'p3', cat: 'activations', label: 'BAC · Brand Activation', art: 'art-3', span: 'wide' },
   { id: 'p4', cat: 'software', label: 'Innovia HealthCare · Platform', art: 'art-4' },
   { id: 'p5', cat: 'ads', label: 'Pittier · Spark Ads', art: 'art-5', span: 'tall' },
   { id: 'p6', cat: 'av', label: 'Umifem · Reel Series', art: 'art-6' },
-  { id: 'p7', cat: 'design', label: 'Coruña · Packaging', art: 'art-7' },
+  { id: 'p7', cat: 'design', label: 'Coruña · Packaging', img: '/assets/portfolio/diseno/design-2.jpg' },
   { id: 'p8', cat: 'ads', label: 'Meta · Q1 Campaign', art: 'art-8' },
   { id: 'p9', cat: 'software', label: 'Pittier · DTC Store', art: 'art-9', span: 'wide' },
-  { id: 'p10', cat: 'activations', label: 'Stattoos · Pop-Up', art: 'art-10' }
+  { id: 'p10', cat: 'activations', label: 'Stattoos · Pop-Up', art: 'art-10' },
+  { id: 'p11', cat: 'activations', label: 'JB\'s Burgers · Golf Team', img: '/assets/portfolio/jb-golf-1.jpg' },
+  { id: 'p12', cat: 'activations', label: 'JB\'s Burgers · Event Branding', img: '/assets/portfolio/jb-golf-2.jpg', span: 'wide', hideFromAll: true },
+  { id: 'p13', cat: 'activations', label: 'JB\'s Burgers · Brand Experience', img: '/assets/portfolio/jb-golf-3.jpg', hideFromAll: true },
+  { id: 'p14', cat: 'design', label: 'JB\'s Burgers · Social Media', img: '/assets/portfolio/diseno/design-3.jpg', hideFromAll: true },
+  { id: 'p15', cat: 'design', label: 'Hi-Tec · Packaging', img: '/assets/portfolio/diseno/design-7.jpg', hideFromAll: true },
+  { id: 'p16', cat: 'design', label: 'Tarantula · Variety', img: '/assets/portfolio/diseno/design-9.jpg', hideFromAll: true },
+  { id: 'p17', cat: 'design', label: 'Super Bowl · Promo', img: '/assets/portfolio/diseno/design-8.jpg', hideFromAll: true },
+  { id: 'p18', cat: 'design', label: 'Nomad · Features', img: '/assets/portfolio/diseno/design-6.jpg', hideFromAll: true }
 ];
 
 const FILTERS = [
@@ -51,11 +59,13 @@ export function Portfolio({ lang, openLightbox }) {
 
         <div className="masonry" style={{ marginTop: 32 }}>
           {PORTFOLIO.map((p) => {
-            const visible = filter === 'all' || p.cat === filter;
+            const visible = filter === 'all' ? !p.hideFromAll : p.cat === filter;
             const cls = "tile" + (p.span === 'tall' ? ' tile--tall' : '') + (p.span === 'wide' ? ' tile--wide' : '') + (visible ? '' : ' hidden');
             return (
               <div key={p.id} className={cls} onClick={() => visible && openLightbox({ kind: 'portfolio', item: p, lang })}>
-                <div className={"tile__art " + p.art}>{p.label.split('·')[0].trim()}</div>
+                <div className={"tile__art " + (p.art || "")}>
+                  {p.img ? <img src={p.img} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> : p.label.split('·')[0].trim()}
+                </div>
                 <div className="tile__overlay">
                   <span className="tile__cat">{t('filter_' + p.cat, lang)}</span>
                   <span className="tile__title">{p.label}</span>
@@ -194,14 +204,21 @@ export function Social({ lang }) {
   ];
 
   const logos = [
-    { src: '/assets/clients/bac.png' }, { src: '/assets/clients/conuna.png' },
-    { src: '/assets/clients/innova.png' }, { src: '/assets/clients/pittier.png' },
-    { src: '/assets/clients/stattoos.png' }, { src: '/assets/clients/umifem.png' },
-    { src: '/assets/clients/hitec.webp' }, { src: '/assets/clients/FIB.png' },
-    { src: '/assets/clients/prada.png' }, { src: '/assets/clients/frutinsa.webp' },
-    { src: '/assets/clients/lumin.avif' }, { src: '/assets/clients/pepes4.png' },
-    { src: '/assets/clients/logo-claro-transparencia.png' }, { src: '/assets/clients/dds.png' },
-    { text: "Nordica" }
+    { src: '/assets/clients/dds.png' },
+    { src: '/assets/clients/jbs_new.png', large: true },
+    { src: '/assets/clients/hitec_new.png', large: true },
+    { src: '/assets/clients/fib_new.png', large: true },
+    { src: '/assets/clients/pepes4.png' },
+    { src: '/assets/clients/pittier.png' },
+    { src: '/assets/clients/prada1.png' },
+    { src: '/assets/clients/prada2.png' },
+    { src: '/assets/clients/stattoos.png' },
+    { src: '/assets/clients/umifem.png' },
+    { src: '/assets/clients/bac_new.png' },
+    { src: '/assets/clients/va_new.png' },
+    { src: '/assets/clients/conuna.png' },
+    { src: '/assets/clients/lumin.avif' },
+    { src: '/assets/clients/rest_new.png' }
   ];
 
   return (
@@ -227,9 +244,9 @@ export function Social({ lang }) {
 
         <div className="logo-wall">
           {logos.map((l, i) =>
-          l.src ?
-          <div key={i} className="logo-cell"><img src={l.src} alt="" /></div> :
-          <div key={i} className="logo-cell logo-cell--text">{l.text}</div>
+            <div key={i} className={"logo-cell" + (l.large ? " logo-cell--large" : "")}>
+              <img src={l.src} alt="" />
+            </div>
           )}
         </div>
       </div>
@@ -319,8 +336,8 @@ export function Lightbox({ data, onClose }) {
         <div className="lightbox__body">
           {kind === 'portfolio' ?
           <>
-              <div className={"tile__art " + item.art} style={{ position: 'absolute', inset: 0, fontSize: 96 }}>
-                {item.label.split('·')[0].trim()}
+              <div className={"tile__art " + (item.art || "")} style={{ position: 'absolute', inset: 0, fontSize: 96 }}>
+                {item.img ? <img src={item.img} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> : item.label.split('·')[0].trim()}
               </div>
               <span className="lightbox__cat">{t('filter_' + item.cat, lang)}</span>
             </> :
