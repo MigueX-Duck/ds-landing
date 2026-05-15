@@ -5,12 +5,12 @@ import { useReveal, CounterOnScroll } from './Common';
 
 const PORTFOLIO = [
   { id: 'p1', cat: 'av', label: 'Stattoos · Brand Film', art: 'art-1', span: 'tall' },
-  { id: 'p2', cat: 'design', label: 'Coruña · Identity', img: '/assets/portfolio/diseno/design-1.jpg' },
+  { id: 'p2', cat: 'design', label: 'Pho · Brand Identity', img: '/assets/portfolio/diseno/design-1.jpg' },
   { id: 'p3', cat: 'activations', label: 'BAC · Brand Activation', art: 'art-3', span: 'wide' },
   { id: 'p4', cat: 'software', label: 'Innovia HealthCare · Platform', art: 'art-4' },
   { id: 'p5', cat: 'ads', label: 'Pittier · Spark Ads', art: 'art-5', span: 'tall' },
   { id: 'p6', cat: 'av', label: 'Umifem · Reel Series', art: 'art-6' },
-  { id: 'p7', cat: 'design', label: 'Coruña · Packaging', img: '/assets/portfolio/diseno/design-2.jpg' },
+  { id: 'p7', cat: 'design', label: 'Pho · Menu Design', img: '/assets/portfolio/diseno/design-2.jpg' },
   { id: 'p8', cat: 'ads', label: 'Meta · Q1 Campaign', art: 'art-8' },
   { id: 'p9', cat: 'software', label: 'Pittier · DTC Store', art: 'art-9', span: 'wide' },
   { id: 'p10', cat: 'activations', label: 'Stattoos · Pop-Up', art: 'art-10' },
@@ -21,7 +21,14 @@ const PORTFOLIO = [
   { id: 'p15', cat: 'design', label: 'Hi-Tec · Packaging', img: '/assets/portfolio/diseno/design-7.jpg', hideFromAll: true },
   { id: 'p16', cat: 'design', label: 'Tarantula · Variety', img: '/assets/portfolio/diseno/design-9.jpg', hideFromAll: true },
   { id: 'p17', cat: 'design', label: 'Super Bowl · Promo', img: '/assets/portfolio/diseno/design-8.jpg', hideFromAll: true },
-  { id: 'p18', cat: 'design', label: 'Nomad · Features', img: '/assets/portfolio/diseno/design-6.jpg', hideFromAll: true }
+  { id: 'p18', cat: 'design', label: 'Nomad · Features', img: '/assets/portfolio/diseno/design-6.jpg', hideFromAll: true },
+  { id: 'p19', cat: 'design', label: 'Pho · Social Graphics', img: '/assets/portfolio/diseno/design-4.jpg', hideFromAll: true },
+  { id: 'p20', cat: 'design', label: 'Duck Studios · Mother\'s Day', img: '/assets/portfolio/diseno/design-5.jpg', hideFromAll: true },
+  { id: 'p21', cat: 'design', label: 'Pho · Campaign', img: '/assets/portfolio/diseno/design-10.jpg', hideFromAll: true },
+  { id: 'p22', cat: 'design', label: 'Pho · Visuals', img: '/assets/portfolio/diseno/design-11.jpg', hideFromAll: true },
+  { id: 'p23', cat: 'design', label: 'Pho · Content', img: '/assets/portfolio/diseno/design-12.jpg', hideFromAll: true },
+  { id: 'p24', cat: 'design', label: 'Pho · Lifestyle', img: '/assets/portfolio/diseno/design-13.jpg', hideFromAll: true },
+  { id: 'p25', cat: 'design', label: 'Pho · Interior', img: '/assets/portfolio/diseno/design-14.jpg', hideFromAll: true }
 ];
 
 const FILTERS = [
@@ -335,14 +342,13 @@ export function Lightbox({ data, onClose }) {
         <button className="lightbox__close" onClick={onClose} aria-label="Close"><Icon.X /></button>
         <div className="lightbox__body">
           {kind === 'portfolio' ?
-          <>
-              <div className={"tile__art " + (item.art || "")} style={{ position: 'absolute', inset: 0, fontSize: 96 }}>
-                {item.img ? <img src={item.img} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> : item.label.split('·')[0].trim()}
-              </div>
-              <span className="lightbox__cat">{t('filter_' + item.cat, lang)}</span>
-            </> :
-          <DashArt kind={item.kind} />
+            (item.img ?
+              <img src={item.img} alt="" className="lightbox__img" /> :
+              <div className={"tile__art " + (item.art || "")}>{item.label.split('·')[0].trim()}</div>
+            ) :
+            <DashArt kind={item.kind} />
           }
+          {kind === 'portfolio' && <span className="lightbox__cat">{t('filter_' + item.cat, lang)}</span>}
         </div>
         <div className="lightbox__caption">
           {kind === 'portfolio' ?
