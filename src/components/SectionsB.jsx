@@ -29,7 +29,7 @@ const PORTFOLIO = [
   { id: 'p23', cat: 'design', label: 'Pho · Content', img: '/assets/portfolio/diseno/design-12.jpg', hideFromAll: true },
   { id: 'p24', cat: 'design', label: 'Pho · Lifestyle', img: '/assets/portfolio/diseno/design-13.jpg', hideFromAll: true },
   { id: 'p25', cat: 'design', label: 'Pho · Interior', img: '/assets/portfolio/diseno/design-14.jpg', hideFromAll: true },
-  { id: 'p26', cat: 'av', label: 'Suite · Brand Identity Film', video: '/assets/portfolio/audiovisual/suite-ingles.mp4' }
+  { id: 'p26', cat: 'av', label: 'Suite · Brand Identity Film', video: '/assets/portfolio/audiovisual/suite-ingles.mp4', img: '/assets/portfolio/audiovisual/suite-ingles-preview.png', span: 'tall' }
 ];
 
 const FILTERS = [
@@ -72,8 +72,9 @@ export function Portfolio({ lang, openLightbox }) {
             return (
               <div key={p.id} className={cls} onClick={() => visible && openLightbox({ kind: 'portfolio', item: p, lang })}>
                 <div className={"tile__art " + (p.art || (p.video ? "art-av" : ""))}>
-                  {p.img ? <img src={p.img} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> : 
-                   (p.video ? <Icon.Play style={{ width: 48, height: 48, color: 'white', opacity: 0.8 }} /> : p.label.split('·')[0].trim())}
+                  {p.img && <img src={p.img} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />}
+                  {!p.img && <span>{p.label.split('·')[0].trim()}</span>}
+                  {p.video && <Icon.Play style={{ position: 'absolute', width: 48, height: 48, color: 'white', opacity: 0.8, zIndex: 2 }} />}
                 </div>
                 <div className="tile__overlay">
                   <span className="tile__cat">{t('filter_' + p.cat, lang)}</span>
