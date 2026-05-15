@@ -67,26 +67,17 @@ export function Hero({ onBookClick, onExploreClick }) {
 
         <div className="ds-phone ds-phone--left">
           <div className="ds-phone__screen">
-            <div className="ds-phone__placeholder">
-              <small>Reel</small>
-              Coruña
-            </div>
+            <img src="/assets/phone_gifs/Left Coruña gif 1.gif" alt="Coruña Reel" className="ds-phone__img" />
           </div>
         </div>
         <div className="ds-phone ds-phone--center">
           <div className="ds-phone__screen">
-            <div className="ds-phone__placeholder">
-              <small>Featured</small>
-              Stattoos
-            </div>
+            <img src="/assets/phone_gifs/Center Stattoos gif 1.gif" alt="Stattoos Reel" className="ds-phone__img" />
           </div>
         </div>
         <div className="ds-phone ds-phone--right">
           <div className="ds-phone__screen">
-            <div className="ds-phone__placeholder">
-              <small>Reel</small>
-              Hi-Tec
-            </div>
+            <img src="/assets/phone_gifs/Right Hi-Tec gif 1.gif" alt="Hi-Tec Reel" className="ds-phone__img" />
           </div>
         </div>
 
@@ -111,6 +102,11 @@ export function LogoTicker() {
     '/assets/clients/pittier.png',
     '/assets/clients/stattoos.png',
     '/assets/clients/umifem.png',
+    '/assets/clients/pepes4.png',
+    '/assets/clients/prada1.png',
+    '/assets/clients/prada2.png',
+    '/assets/clients/Logo-blanco-conuna.png',
+    '/assets/clients/lumin.avif',
   ];
   const all = [...clients, ...clients, ...clients];
   return (
@@ -288,29 +284,29 @@ export function SuccessStories() {
       tag: 'Case study · UMIFEM',
       title: 'A women-led health brand turned recognizable, scalable, and lovable.',
       quote: "Duck Studios doesn't just deliver creative — they're a real partner. They've moved our brand from quiet to consistently in front of the people we wanted to reach.",
-      kpis: [{ v: '+342%', l: 'Reach' }, { v: '4.6x', l: 'Leads/mo' }, { v: '18mo', l: 'Partnership' }],
-      bg: 'UMIFEM',
+      kpis: [{ v: '+6K', l: 'Leads' }, { v: '17%', l: 'Conversion' }, { v: '+30M', l: 'Impressions' }],
+      img: '/assets/success_stories/umifem.png',
     },
     {
       tag: 'Case study · Hi-Tec',
-      title: 'Built the launch playbook for a category-defining tech brand.',
-      quote: 'They challenged the obvious and built a launch that actually landed. No fluff. Real outcomes.',
-      kpis: [{ v: '+212%', l: 'CTR' }, { v: '3.1x', l: 'Pipeline' }, { v: '$0.34', l: 'CPC' }],
-      bg: 'Hi-Tec',
+      title: 'Repositioning a heritage brand for the modern market.',
+      quote: 'The dynamism and collaboration we have received from the group has been exquisite. At the creative level they give 200%.',
+      kpis: [{ v: '8.9M', l: 'Impressions' }, { v: '+532%', l: 'Reels growth' }, { v: '+212%', l: 'CTR' }],
+      img: '/assets/success_stories/hitec.jpg',
     },
     {
-      tag: 'Case study · JBS',
-      title: 'A retail wheel-of-fortune that quadrupled foot traffic.',
+      tag: 'Case study · JB\'s Burgers',
+      title: 'Rapid franchise scaling in a competitive market.',
       quote: 'Strategy, design, software, and content under one roof. That made all the difference for us.',
-      kpis: [{ v: '+418%', l: 'Foot Traffic' }, { v: '92k', l: 'Plays' }, { v: '4.8★', l: 'Brand NPS' }],
-      bg: 'JBS',
+      kpis: [{ v: '3→7', l: 'Locations' }, { v: '250K+', l: 'Interactions' }, { v: '<1yr', l: 'Expansion' }],
+      img: '/assets/success_stories/jbs.png',
     },
     {
-      tag: 'Case study · FIB',
-      title: 'A B2B platform reimagined for clarity, conversion, and speed.',
-      quote: 'They get the brief on day one and ship what you actually need. Rare.',
-      kpis: [{ v: '+76%', l: 'Conversion' }, { v: '-44%', l: 'Bounce' }, { v: '2.1s', l: 'TTI' }],
-      bg: 'FIB',
+      tag: 'Case study · Fun in a Box',
+      title: 'Viral success that optimized sales and load times.',
+      quote: "Duck Studios' advice has been a 10. Beyond marketing, they have helped us automate and simplify our internal processes.",
+      kpis: [{ v: '40%', l: 'Sales Inc.' }, { v: '76%', l: 'Faster load' }, { v: '334K', l: 'Reach' }],
+      img: '/assets/success_stories/fib.png',
     },
   ];
 
@@ -343,7 +339,9 @@ export function SuccessStories() {
         </div>
 
         <div className="ds-story-card" key={index}>
-          <div className="ds-story-card__img">{story.bg}</div>
+          <div className="ds-story-card__img">
+            <img src={story.img} alt={story.tag} className="ds-story-card__bg-img" />
+          </div>
           <div className="ds-story-card__body">
             <div className="ds-story-card__tag">{story.tag}</div>
             <h3>{story.title}</h3>

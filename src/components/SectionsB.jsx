@@ -7,10 +7,10 @@ const PORTFOLIO = [
   { id: 'p1', cat: 'av', label: 'Stattoos · Brand Film', art: 'art-1', span: 'tall' },
   { id: 'p2', cat: 'design', label: 'Coruña · Identity', art: 'art-2' },
   { id: 'p3', cat: 'activations', label: 'BAC · Brand Activation', art: 'art-3', span: 'wide' },
-  { id: 'p4', cat: 'software', label: 'Innova · Platform', art: 'art-4' },
+  { id: 'p4', cat: 'software', label: 'Innovia HealthCare · Platform', art: 'art-4' },
   { id: 'p5', cat: 'ads', label: 'Pittier · Spark Ads', art: 'art-5', span: 'tall' },
   { id: 'p6', cat: 'av', label: 'Umifem · Reel Series', art: 'art-6' },
-  { id: 'p7', cat: 'design', label: 'Conuna · Packaging', art: 'art-7' },
+  { id: 'p7', cat: 'design', label: 'Coruña · Packaging', art: 'art-7' },
   { id: 'p8', cat: 'ads', label: 'Meta · Q1 Campaign', art: 'art-8' },
   { id: 'p9', cat: 'software', label: 'Pittier · DTC Store', art: 'art-9', span: 'wide' },
   { id: 'p10', cat: 'activations', label: 'Stattoos · Pop-Up', art: 'art-10' }
@@ -72,19 +72,19 @@ export function Stories({ lang }) {
   const stories = [
     {
       client: 'story1_client', industry: 'story1_industry', h: 'story1_h', r: 'story1_r',
-      metrics: [{ v: 4, suf: 'x', label: { en: 'reservations', es: 'reservas' } }, { v: 38, suf: '%', label: { en: 'fewer no-shows', es: 'menos no-shows' } }, { v: 90, suf: '%', label: { en: 'occupancy', es: 'ocupación' } }]
+      metrics: [{ v: 6, suf: 'K+', label: { en: 'leads generated', es: 'leads generados' } }, { v: 17, suf: '%', label: { en: 'conv. rate', es: 'tasa conv.' } }, { v: 30, suf: 'M+', label: { en: 'impressions', es: 'impresiones' } }]
     },
     {
       client: 'story2_client', industry: 'story2_industry', h: 'story2_h', r: 'story2_r',
-      metrics: [{ v: 8.3, suf: 'x', label: { en: 'ROAS', es: 'ROAS' } }, { v: 6, suf: 'wk', label: { en: 'to break-even', es: 'a breakeven' } }, { v: 312, suf: '%', label: { en: 'units sold', es: 'unidades vendidas' } }]
+      metrics: [{ v: 40, suf: '%', label: { en: 'sales increase', es: 'aumento en ventas' } }, { v: 76, suf: '%', label: { en: 'faster load', es: 'carga más rápida' } }, { v: 334, suf: 'K', label: { en: 'viral reach', es: 'alcance viral' } }]
     },
     {
       client: 'story3_client', industry: 'story3_industry', h: 'story3_h', r: 'story3_r',
-      metrics: [{ v: 212, suf: '%', label: { en: 'qualified pipeline', es: 'pipeline calificado' } }, { v: 47, suf: '%', label: { en: 'lower CAC', es: 'CAC más bajo' } }, { v: 3.4, suf: 'x', label: { en: 'demo bookings', es: 'demos agendadas' } }]
+      metrics: [{ v: 7, suf: '', label: { en: 'total locations', es: 'locales totales' } }, { v: 250, suf: 'K+', label: { en: 'interactions', es: 'interacciones' } }, { v: 12, suf: 'mo', label: { en: 'scaling time', es: 'tiempo escala' } }]
     },
     {
       client: 'story4_client', industry: 'story4_industry', h: 'story4_h', r: 'story4_r',
-      metrics: [{ v: 38, suf: '%', label: { en: 'of revenue is DTC', es: 'ingresos son DTC' } }, { v: 5.1, suf: 'x', label: { en: 'AOV growth', es: 'crecimiento AOV' } }, { v: 12, suf: '%', label: { en: 'returning rate', es: 'tasa recurrente' } }]
+      metrics: [{ v: 8.9, suf: 'M', label: { en: 'impressions', es: 'impresiones' } }, { v: 532, suf: '%', label: { en: 'reels growth', es: 'crecimiento reels' } }, { v: 212, suf: '%', label: { en: 'CTR increase', es: 'aumento CTR' } }]
     }
   ];
 
