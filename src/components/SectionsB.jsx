@@ -197,9 +197,11 @@ export function Social({ lang }) {
     { src: '/assets/clients/bac.png' }, { src: '/assets/clients/conuna.png' },
     { src: '/assets/clients/innova.png' }, { src: '/assets/clients/pittier.png' },
     { src: '/assets/clients/stattoos.png' }, { src: '/assets/clients/umifem.png' },
-    { text: "Hi-Tec" }, { text: "Nordica" }, { text: "Vela" }, { text: "Volt" },
-    { text: "Cobre" }, { text: "Lumen" }, { text: "Forja" }, { text: "Astra" },
-    { text: "Cerro" }
+    { src: '/assets/clients/hitec.webp' }, { src: '/assets/clients/FIB.png' },
+    { src: '/assets/clients/prada.png' }, { src: '/assets/clients/frutinsa.webp' },
+    { src: '/assets/clients/lumin.avif' }, { src: '/assets/clients/pepes4.png' },
+    { src: '/assets/clients/logo-claro-transparencia.png' }, { src: '/assets/clients/dds.png' },
+    { text: "Nordica" }
   ];
 
   return (
