@@ -96,7 +96,7 @@ export function WhoWeAre({ lang }) {
   const team = [
   { initials: "RB", img: "/assets/team/rachel-basulto.webp", name: "Rachel Basulto", role: { en: "Founder & CEO", es: "Fundadora & CEO" } },
   { initials: "VL", img: "/assets/team/valeria-leiva.webp", name: "Valeria Leiva", role: { en: "Creative Director", es: "Directora Creativa" } },
-  { initials: "PD", img: "/assets/team/pablo-diaz.webp", name: "Pablo Díaz", role: { en: "Head of Creative Strategy", es: "Head of Creative Strategy" } }];
+  { initials: "FA", img: "/assets/team/fabio-apu.webp", name: "Fabio Apu", role: { en: "Paid Media Specialist", es: "Especialista en Paid Media" } }];
 
   return (
     <section className="section who section--black" id="team">

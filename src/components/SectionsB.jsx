@@ -278,19 +278,19 @@ export function Closing({ lang }) {
 
         <div className="closing__card">
           <div className="closing__photo">
-            <img src="/assets/team/rachel-basulto.webp" alt="Rache Vargas" />
+            <img src="/assets/team/rachel-basulto.webp" alt="Rachel Basulto" />
           </div>
           <div>
-            <h3 className="closing__name">Rache Vargas</h3>
+            <h3 className="closing__name">Rachel Basulto</h3>
             <div className="closing__role">{t('closing_role', lang)}</div>
             <div className="closing__contacts">
-              <a className="closing__btn closing__btn--primary" href="mailto:rache@duckstudios.net">
+              <a className="closing__btn closing__btn--primary" href="mailto:rachel.basulto@duckstudios.net">
                 <Icon.Mail /> {t('btn_email', lang)}
               </a>
-              <a className="closing__btn" href="https://wa.me/50671234567">
+              <a className="closing__btn" href="https://wa.me/50671049909">
                 <Icon.Phone /> {t('btn_whatsapp', lang)}
               </a>
-              <a className="closing__btn" href="#">
+              <a className="closing__btn" href="https://calendly.com/duckstudios">
                 <Icon.Calendar /> {t('btn_book', lang)}
               </a>
             </div>
