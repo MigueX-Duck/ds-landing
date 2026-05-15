@@ -5,12 +5,12 @@ import { useReveal, CounterOnScroll } from './Common';
 
 const PORTFOLIO = [
   { id: 'p1', cat: 'av', label: 'Stattoos · Brand Film', art: 'art-1', span: 'tall' },
-  { id: 'p2', cat: 'design', label: 'Pho · Brand Identity', img: '/assets/portfolio/diseno/design-1.jpg' },
+  { id: 'p2', cat: 'design', label: 'Pho · Social Media', img: '/assets/portfolio/diseno/design-1.jpg' },
   { id: 'p3', cat: 'activations', label: 'BAC · Brand Activation', art: 'art-3', span: 'wide' },
   { id: 'p4', cat: 'software', label: 'Innovia HealthCare · Platform', art: 'art-4' },
   { id: 'p5', cat: 'ads', label: 'Pittier · Spark Ads', art: 'art-5', span: 'tall' },
   { id: 'p6', cat: 'av', label: 'Umifem · Reel Series', art: 'art-6' },
-  { id: 'p7', cat: 'design', label: 'Pho · Menu Design', img: '/assets/portfolio/diseno/design-2.jpg' },
+  { id: 'p7', cat: 'design', label: 'Pho · Social Media', img: '/assets/portfolio/diseno/design-2.jpg' },
   { id: 'p8', cat: 'ads', label: 'Meta · Q1 Campaign', art: 'art-8' },
   { id: 'p9', cat: 'software', label: 'Pittier · DTC Store', art: 'art-9', span: 'wide' },
   { id: 'p10', cat: 'activations', label: 'Stattoos · Pop-Up', art: 'art-10' },
@@ -28,7 +28,8 @@ const PORTFOLIO = [
   { id: 'p22', cat: 'design', label: 'Pho · Visuals', img: '/assets/portfolio/diseno/design-11.jpg', hideFromAll: true },
   { id: 'p23', cat: 'design', label: 'Pho · Content', img: '/assets/portfolio/diseno/design-12.jpg', hideFromAll: true },
   { id: 'p24', cat: 'design', label: 'Pho · Lifestyle', img: '/assets/portfolio/diseno/design-13.jpg', hideFromAll: true },
-  { id: 'p25', cat: 'design', label: 'Pho · Interior', img: '/assets/portfolio/diseno/design-14.jpg', hideFromAll: true }
+  { id: 'p25', cat: 'design', label: 'Pho · Interior', img: '/assets/portfolio/diseno/design-14.jpg', hideFromAll: true },
+  { id: 'p26', cat: 'av', label: 'Suite · Brand Identity Film', video: '/assets/portfolio/audiovisual/suite-ingles.mp4' }
 ];
 
 const FILTERS = [
@@ -70,8 +71,9 @@ export function Portfolio({ lang, openLightbox }) {
             const cls = "tile" + (p.span === 'tall' ? ' tile--tall' : '') + (p.span === 'wide' ? ' tile--wide' : '') + (visible ? '' : ' hidden');
             return (
               <div key={p.id} className={cls} onClick={() => visible && openLightbox({ kind: 'portfolio', item: p, lang })}>
-                <div className={"tile__art " + (p.art || "")}>
-                  {p.img ? <img src={p.img} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> : p.label.split('·')[0].trim()}
+                <div className={"tile__art " + (p.art || (p.video ? "art-av" : ""))}>
+                  {p.img ? <img src={p.img} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /> : 
+                   (p.video ? <Icon.Play style={{ width: 48, height: 48, color: 'white', opacity: 0.8 }} /> : p.label.split('·')[0].trim())}
                 </div>
                 <div className="tile__overlay">
                   <span className="tile__cat">{t('filter_' + p.cat, lang)}</span>
@@ -342,9 +344,12 @@ export function Lightbox({ data, onClose }) {
         <button className="lightbox__close" onClick={onClose} aria-label="Close"><Icon.X /></button>
         <div className="lightbox__body">
           {kind === 'portfolio' ?
-            (item.img ?
-              <img src={item.img} alt="" className="lightbox__img" /> :
-              <div className={"tile__art " + (item.art || "")}>{item.label.split('·')[0].trim()}</div>
+            (item.video ?
+              <video src={item.video} controls autoPlay className="lightbox__video" style={{ maxWidth: '100%', maxHeight: '100%' }} /> :
+              (item.img ?
+                <img src={item.img} alt="" className="lightbox__img" /> :
+                <div className={"tile__art " + (item.art || "")}>{item.label.split('·')[0].trim()}</div>
+              )
             ) :
             <DashArt kind={item.kind} />
           }

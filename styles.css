@@ -1160,6 +1160,7 @@ button { font-family: inherit; cursor: pointer; }
 .art-8 { background: linear-gradient(135deg, #0f3460 0%, #FFBC00 100%); }
 .art-9 { background: linear-gradient(135deg, #6f00ff 0%, #009EFF 100%); }
 .art-10 { background: linear-gradient(135deg, #ff6b6b 0%, #FFBC00 100%); }
+.art-av { background: linear-gradient(135deg, #000 0%, #1a1a2e 100%); }
 
 /* ============================================================
    TWEAKS OVERRIDES — controls applied via [data-*] on <body>
