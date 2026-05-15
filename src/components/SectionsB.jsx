@@ -29,7 +29,7 @@ const PORTFOLIO = [
   { id: 'p23', cat: 'design', label: 'Pho · Content', img: '/assets/portfolio/diseno/design-12.jpg', hideFromAll: true },
   { id: 'p24', cat: 'design', label: 'Pho · Lifestyle', img: '/assets/portfolio/diseno/design-13.jpg', hideFromAll: true },
   { id: 'p25', cat: 'design', label: 'Pho · Interior', img: '/assets/portfolio/diseno/design-14.jpg', hideFromAll: true },
-  { id: 'p26', cat: 'av', label: 'Suite · Brand Identity Film', video: '/assets/portfolio/audiovisual/suite-ingles.mp4', img: '/assets/portfolio/audiovisual/suite-ingles-preview.png', span: 'tall' }
+  { id: 'p26', cat: 'av', label: 'Rest Zone · Reel', video: '/assets/portfolio/audiovisual/suite-ingles.mp4', img: '/assets/portfolio/audiovisual/suite-ingles-preview.png', span: 'tall' }
 ];
 
 const FILTERS = [
