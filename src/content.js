@@ -110,6 +110,10 @@ export const COPY = {
   d3_sub: { en: "Last 90 days", es: "Últimos 90 días" },
   d4_title: { en: "TikTok Spark Ads · Pittier", es: "TikTok Spark Ads · Pittier" },
   d4_sub: { en: "Launch sprint", es: "Sprint de lanzamiento" },
+  d5_title: { en: "Meta Ads · Messenger", es: "Meta Ads · Messenger" },
+  d5_sub: { en: "Performance Summary", es: "Resumen de rendimiento" },
+  d6_title: { en: "Meta Ads · Lead Gen", es: "Meta Ads · Clientes Potenciales" },
+  d6_sub: { en: "Performance Summary", es: "Resumen de rendimiento" },
 
   // 07 Social
   social_eyebrow: { en: "06 · Social proof", es: "06 · Prueba social" },

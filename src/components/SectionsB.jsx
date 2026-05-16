@@ -29,7 +29,8 @@ const PORTFOLIO = [
   { id: 'p23', cat: 'design', label: 'Pho · Content', img: '/assets/portfolio/diseno/design-12.jpg', hideFromAll: true },
   { id: 'p24', cat: 'design', label: 'Pho · Lifestyle', img: '/assets/portfolio/diseno/design-13.jpg', hideFromAll: true },
   { id: 'p25', cat: 'design', label: 'Pho · Interior', img: '/assets/portfolio/diseno/design-14.jpg', hideFromAll: true },
-  { id: 'p26', cat: 'av', label: 'Rest Zone · Reel', video: '/assets/portfolio/audiovisual/suite-ingles.mp4', img: '/assets/portfolio/audiovisual/suite-ingles-preview.png', span: 'tall' }
+  { id: 'p26', cat: 'av', label: 'Rest Zone · Reel', video: '/assets/portfolio/audiovisual/suite-ingles.mp4', img: '/assets/portfolio/audiovisual/suite-ingles-preview.png', span: 'tall' },
+  { id: 'p27', cat: 'av', label: 'Pepperoni\'s · World Pizza Day', video: '/assets/portfolio/audiovisual/pepperoni-pizza-reel.mp4', img: '/assets/portfolio/audiovisual/pepperoni-pizza-preview.png', span: 'tall' }
 ];
 
 const FILTERS = [
@@ -175,7 +176,23 @@ export function Dashboards({ lang, openLightbox }) {
     { id: 'd1', t: 'd1_title', s: 'd1_sub', kind: 'bars', metric: { v: '8.3×', label: { en: 'ROAS', es: 'ROAS' } } },
     { id: 'd2', t: 'd2_title', s: 'd2_sub', kind: 'line', metric: { v: '+312%', label: { en: 'Conversions', es: 'Conversiones' } } },
     { id: 'd3', t: 'd3_title', s: 'd3_sub', kind: 'line', metric: { v: '47%', label: { en: 'Open rate', es: 'Apertura' } } },
-    { id: 'd4', t: 'd4_title', s: 'd4_sub', kind: 'bars', metric: { v: '$0.18', label: { en: 'CPC', es: 'CPC' } } }
+    { id: 'd4', t: 'd4_title', s: 'd4_sub', kind: 'bars', metric: { v: '$0.18', label: { en: 'CPC', es: 'CPC' } } },
+    { 
+      id: 'd5', t: 'd5_title', s: 'd5_sub', kind: 'line', 
+      metric: { v: '2,095', label: { en: 'Conversations', es: 'Conversaciones' } },
+      extra: [
+        { v: '₡448', label: { en: 'Cost per conv.', es: 'Costo por conv.' } },
+        { v: '₡937K', label: { en: 'Spent', es: 'Inversión' } }
+      ]
+    },
+    { 
+      id: 'd6', t: 'd6_title', s: 'd6_sub', kind: 'line', 
+      metric: { v: '74', label: { en: 'Leads', es: 'Leads' } },
+      extra: [
+        { v: '$12.37', label: { en: 'Cost per lead', es: 'Costo por lead' } },
+        { v: '$915', label: { en: 'Spent', es: 'Inversión' } }
+      ]
+    }
   ];
 
   return (
@@ -364,7 +381,14 @@ export function Lightbox({ data, onClose }) {
             </> :
           <>
               <h4>{t(item.t, lang)}</h4>
-              <p>{t(item.s, lang)} · {item.metric.label[lang]}: <strong style={{ color: 'var(--ds-yellow)' }}>{item.metric.v}</strong></p>
+              <p>
+                {t(item.s, lang)} · {item.metric.label[lang]}: <strong style={{ color: 'var(--ds-yellow)' }}>{item.metric.v}</strong>
+                {item.extra && item.extra.map((ex, i) => (
+                  <React.Fragment key={i}>
+                    {" · "}{ex.label[lang]}: <strong style={{ color: 'var(--ds-yellow)' }}>{ex.v}</strong>
+                  </React.Fragment>
+                ))}
+              </p>
             </>
           }
         </div>
