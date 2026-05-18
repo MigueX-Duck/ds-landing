@@ -120,20 +120,104 @@ export const COPY = {
   social_h: { en: "Don't take our word for it. Take theirs.", es: "No nos creas. Créeles a ellos." },
   social_lead: { en: "Three founders, fifteen brands, one consistent answer.", es: "Tres fundadores, quince marcas, una sola respuesta consistente." },
 
-  t1_quote: { en: "They didn't just deliver a campaign — they rebuilt the way we go to market. Six months in, our pipeline finally outpaces our ability to staff against it.", es: "No solo entregaron una campaña — reconstruyeron nuestra forma de salir al mercado. Seis meses después, el pipeline ya supera nuestra capacidad de atenderlo." },
-  t1_name: { en: "Andrea Mora", es: "Andrea Mora" },
-  t1_role: { en: "CMO · Innovia", es: "CMO · Innovia" },
-  t1_stat: { en: "+212% qualified pipeline", es: "+212% pipeline calificado" },
+  t1_quote: {
+    en: "Working with them has significantly elevated our social media presence and the perception our customers have of us as a brand. We are extremely grateful for their dedication and the outstanding results.",
+    es: "Trabajar con ellos elevó significativamente el nivel de cómo nos ven en redes sociales y la percepción que los clientes tienen de nosotros como marca. Estamos sumamente agradecidos por su dedicación y los excelentes resultados logrados."
+  },
+  t1_name: { en: "Peperonni's Express Costa Rica", es: "Peperonni's Express Costa Rica" },
+  t1_role: { en: "Pizzeria & Restaurant", es: "Pizzería y Restaurante" },
+  t1_stat: { en: "Brand Elevation", es: "Elevación de Marca" },
 
-  t2_quote: { en: "I expected an agency. We got a department. They sit in our exec meetings now — that's how integrated they became.", es: "Esperaba una agencia. Obtuvimos un departamento. Hoy se sientan en nuestras juntas ejecutivas — así de integrados quedaron." },
-  t2_name: { en: "Luis Soto", es: "Luis Soto" },
-  t2_role: { en: "CEO · Stattoos", es: "CEO · Stattoos" },
-  t2_stat: { en: "8.3× ROAS · 6 weeks", es: "8.3× ROAS · 6 semanas" },
+  t2_quote: {
+    en: "Since mid-2024, working with Duck Studios has been a beautiful experience for Prada Lab. They truly understood who we are, what inspires us, and where we want to grow. What we appreciate most is their closeness, sensitivity, and passion. They have helped us give life and voice to our brand in an authentic and special way. It has been a partnership of immense value for our growth.",
+    es: "Desde mediados de 2024 hemos vivido una experiencia hermosa trabajando junto a Duck Studios en Prada Lab. Lograron comprender quiénes somos, qué nos inspira y hacia dónde queremos crecer, y eso se nota en cada detalle de los proyectos que realizamos juntos. Lo que más apreciamos es la cercanía, la sensibilidad y la pasión con la que trabajan; nos han ayudado a darle vida y voz a nuestra marca de una manera auténtica y especial. Ha sido una alianza de un valor inmenso para nuestro crecimiento."
+  },
+  t2_name: { en: "Prada Lab", es: "Prada Lab" },
+  t2_role: { en: "Clinical Laboratory", es: "Laboratorio Clínico" },
+  t2_stat: { en: "Authentic Identity", es: "Identidad Auténtica" },
 
-  t3_quote: { en: "Most agencies sell creative and pray it works. Duck Studios sells the test, the result, and the plan to scale it. The difference shows up on the P&L.", es: "La mayoría vende creativo y reza para que funcione. Duck Studios vende la prueba, el resultado y el plan para escalar. La diferencia se ve en el P&L." },
-  t3_name: { en: "Marina Quirós", es: "Marina Quirós" },
-  t3_role: { en: "Founder · Coruña", es: "Fundadora · Coruña" },
-  t3_stat: { en: "4 sold-out nights / week", es: "4 noches llenas / semana" },
+  t3_quote: {
+    en: "Since mid-2024, we’ve had the joy of working with a team that has truly made a difference for Prada Dent. More than just a service, we found creative and dedicated partners who genuinely care about our brand's growth. They’ve supported us with patience, professionalism, and an exceptional human touch that perfectly aligns with our brand values. For us, Duck Studios is a fundamental part of the path we are building.",
+    es: "Desde mediados de 2024 hemos tenido la dicha de trabajar con un equipo que realmente ha marcado la diferencia para Prada Dent. Más que un servicio, hemos encontrado en ellos personas sumamente comprometidas, creativas y con un interés real por nuestro crecimiento. Nos han acompañado con paciencia, profesionalismo y un trato humano excepcional que se alinea con nuestros valores de marca. Cada propuesta y cada detalle ha fortalecido nuestra presencia e identidad. Para nosotros, Duck Studios es una parte fundamental del camino que estamos construyendo."
+  },
+  t3_name: { en: "Prada Dent", es: "Prada Dent" },
+  t3_role: { en: "Dental Clinic", es: "Clínica Dental" },
+  t3_stat: { en: "Trusted Partnership", es: "Alianza de Confianza" },
+
+  t4_quote: {
+    en: "Working with them has been an extraordinary experience. Thank you for your unconditional support, commitment, patience, and the excellence in every deliverable. In Duck Studios, we found a family. That closeness and trust have been key to making every project incredible and achieving continuous growth. 100% recommended! 🧡✨",
+    es: "Trabajar con ustedes ha sido una experiencia extraordinaria. Gracias por su apoyo incondicional, por su compromiso, su paciencia y por la excelencia en cada entrega. En Duck Studios no solo encontramos un gran equipo de trabajo; encontramos una familia. Esa cercanía y confianza han sido clave para que cada proyecto sea increíble y logremos un crecimiento continuo. ¡Duck Studios 100% recomendado! 🧡✨"
+  },
+  t4_name: { en: "Allan Hernández", es: "Allan Hernández" },
+  t4_role: { en: "Marketing Director · Coruña", es: "Director de Mercadeo · Coruña" },
+  t4_stat: { en: "100% Recommended", es: "100% Recomendado" },
+
+  t5_quote: {
+    en: "We have been working with Duck Studios for several months, and we have only words of gratitude. Their team stands out not only for their excellent content creation but also for the quality of their editing, innovative ideas, and impeccable customer service. We are extremely grateful to them and will continue collaborating for many years to come. 10/10!",
+    es: "Hemos estado trabajando con Duck Studios durante varios meses y solo tenemos palabras de agradecimiento. Su equipo destaca no solo por la excelente creación de contenido, sino también por la calidad de sus ediciones, sus ideas innovadoras y su impecable atención al cliente. Estamos sumamente agradecidos y seguiremos colaborando por muchos años más. ¡10/10!"
+  },
+  t5_name: { en: "Innovia Healthcare", es: "Innovia Healthcare" },
+  t5_role: { en: "Healthcare Innovators", es: "Innovación en Salud" },
+  t5_stat: { en: "10/10 Satisfaction", es: "Satisfacción 10/10" },
+
+  t6_quote: {
+    en: "The dynamism and collaboration we have received from the team has been outstanding. Creatively, they give 200%, and honestly, this satisfaction is a reflection of the success we have achieved together. I recommend them 100%, and we trust them completely. 🎯",
+    es: "El dinamismo y la colaboración que hemos recibido de parte del equipo ha sido exquisito. A nivel creativo dan el 200%, y honestamente, la satisfacción de lo anterior es el reflejo del éxito que hemos logrado juntos. Los recomiendo al 100% y confiamos plenamente en ellos. 🎯"
+  },
+  t6_name: { en: "Johnathan Torres", es: "Johnathan Torres" },
+  t6_role: { en: "Hi-Tec · Costa Rica", es: "Hi-Tec · Costa Rica" },
+  t6_stat: { en: "200% Creative Effort", es: "200% Esfuerzo Creativo" },
+
+  t7_quote: {
+    en: "Duck Studios’ advisory has been a solid 10/10. Beyond marketing, they helped us automate and simplify our internal processes, systematizing our controls to take them to another level. We are extremely pleased with the added value they bring to our daily operations. Working with the team is effortless; their work structure greatly facilitates communication and the development of new initiatives.",
+    es: "La asesoría de Duck Studios ha sido de 10. Más allá del marketing, nos ayudaron a automatizar y simplificar nuestros procesos internos, sistematizando nuestros controles para llevarlos a otro nivel. Estamos sumamente contentos con el valor agregado que aportan a nuestras operaciones diarias. Trabajar con el equipo es muy fácil; su estructura de trabajo facilita enormemente la comunicación y el desarrollo de nuevas iniciativas."
+  },
+  t7_name: { en: "Fun in a Box", es: "Fun in a Box" },
+  t7_role: { en: "Toy Store & Events", es: "Juguetería y Eventos" },
+  t7_stat: { en: "10/10 Operations", es: "Operaciones 10/10" },
+
+  t8_quote: {
+    en: "El Grupo Prada has been working with Duck Studios since the beginning of the year, and we’ve had a flawless experience. Their order, structure, meticulous follow-ups, and meeting dynamics make working with them extremely fluid. They are a strategic partner with whom we generate great synergy. Currently, three of our businesses collaborate with them, and everyone is delighted with Duck Studios' performance. Highly recommended!",
+    es: "El Grupo Prada ha estado trabajando con Duck Studios desde el inicio del año y hemos tenido una experiencia perfecta. Su orden, estructura, seguimiento minucioso de temas y metodología de reuniones hacen que trabajar con ellos sea sumamente fluido. Es un aliado estratégico con el que se genera muchísima sinergia. Actualmente tres de nuestras empresas colaboran con ellos y todo el personal está encantado con el desempeño de Duck Studios. ¡Altamente recomendados!"
+  },
+  t8_name: { en: "Antonio Prada", es: "Antonio Prada" },
+  t8_role: { en: "CEO · El Grupo Prada", es: "CEO · El Grupo Prada" },
+  t8_stat: { en: "Perfect Synergy", es: "Sinergia Perfecta" },
+
+  t9_quote: {
+    en: "Partnering with Duck Studios has been one of our best experiences since we switched agencies! They are always attentive to every detail, showing an impeccable attitude and great professionalism. We are extremely grateful to the team; we started with fewer than 1,000 followers and have already surpassed 8,000 in record time! 🙌🔥❤️",
+    es: "¡Colaborar con Duck Studios ha sido una de las mejores experiencias desde que cambiamos de agencia! Siempre están pendientes de cada detalle, con una actitud impecable y un gran profesionalismo. Estamos sumamente agradecidos con todo su equipo; empezamos con menos de 1,000 seguidores y ya superamos los 8,000 en tiempo récord. 🙌🔥❤️"
+  },
+  t9_name: { en: "UMIFEM", es: "UMIFEM" },
+  t9_role: { en: "Gynecology Clinic", es: "Clínica de Ginecología" },
+  t9_stat: { en: "8,000+ Followers", es: "8,000+ Seguidores" },
+
+  t10_quote: {
+    en: "Duck Studios arrived at the perfect moment of change and innovation. After analyzing several alternatives, we chose to work together, and it has been an excellent decision. They are highly professional, organized, and have a great team. I am very grateful for the extraordinary service they provide.",
+    es: "Duck Studios llegó en un momento oportuno de cambios e innovación. Después de analizar varias alternativas, tomamos la decisión de trabajar juntos y ha sido una excelente elección. Son sumamente profesionales, organizados y cuentan con un gran equipo humano. Estoy muy agradecido por el extraordinario servicio que nos brindan."
+  },
+  t10_name: { en: "Pedro Martínez", es: "Pedro Martínez" },
+  t10_role: { en: "Digital Innovation", es: "Innovación Digital" },
+  t10_stat: { en: "Outstanding Service", es: "Servicio Sobresaliente" },
+
+  t11_quote: {
+    en: "I have worked closely with Duck Studios, and the result has been excellent. I am extremely satisfied with their dedication and the outstanding service they provide!",
+    es: "He trabajado de la mano con Duck Studios y el resultado ha sido excelente. ¡Me siento sumamente satisfecho con la dedicación y el extraordinario servicio brindado!"
+  },
+  t11_name: { en: "Alfonso Monge", es: "Alfonso Monge" },
+  t11_role: { en: "Strategic Collaboration", es: "Colaboración Estratégica" },
+  t11_stat: { en: "Highly Satisfied", es: "Muy Satisfecho" },
+
+  t12_quote: {
+    en: "Our experience with Duck Studios has been incredible. Their magical energy, guidance, creativity, and constant support throughout our entire website development process far exceeded our expectations 😍. We feel they are part of our family and look forward to continuing to grow together! 🐥❤️✨",
+    es: "Nuestra experiencia con Duck Studios ha sido increíble. Su mágica energía, asesoría, creatividad y el constante acompañamiento durante todo el desarrollo de nuestro sitio web superaron por mucho nuestras expectativas 😍. Los sentimos parte de nuestra familia y queremos seguir creciendo juntos. 🐥❤️✨"
+  },
+  t12_name: { en: "Natascha Figuera", es: "Natascha Figuera" },
+  t12_role: { en: "Creative Partner", es: "Aliada Creativa" },
+  t12_stat: { en: "Exceeded Expectations", es: "Superó Expectativas" },
+
+  social_show_more: { en: "Show more testimonials", es: "Ver más testimonios" },
+  social_show_less: { en: "Show less", es: "Ver menos" },
 
   // 08 Risk
   risk_eyebrow: { en: "07 · The board's questions", es: "07 · Las preguntas del board" },

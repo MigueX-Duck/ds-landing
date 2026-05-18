@@ -319,7 +319,8 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 .scroll-indicator {
-  position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
+  position: relative;
+  margin: 48px auto 0;
   z-index: 3;
   display: flex; flex-direction: column; align-items: center; gap: 10px;
   color: rgba(255,255,255,0.6);
@@ -796,7 +797,9 @@ button { font-family: inherit; cursor: pointer; }
 /* ==========  Section 07 — Social Proof  ========== */
 .social { background: transparent; color: var(--ds-white); }
 .testimonials {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
   margin-top: 56px;
 }
 .testimonial {
@@ -820,6 +823,17 @@ button { font-family: inherit; cursor: pointer; }
   font-size: 14px;
   color: #1a1a1a;
 }
+.testimonial__link {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(26, 26, 26, 0.35);
+  transition: all 220ms var(--ease-out);
+  display: inline-block;
+}
+.testimonial__link:hover {
+  color: #cc9900;
+  border-bottom-color: #cc9900;
+}
 .testimonial__role {
   font-size: 12px;
   color: #6a6a6a;
@@ -837,6 +851,88 @@ button { font-family: inherit; cursor: pointer; }
   color: var(--ds-black);
 }
 .testimonial__stat .y { color: #cc9900; }
+
+.testimonials__actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.btn-more {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.05) 35%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.05) 65%, rgba(255,255,255,0.05) 100%);
+  background-size: 200% 100%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--ds-white);
+  padding: 14px 32px;
+  border-radius: var(--radius-pill);
+  font-weight: var(--weight-bold);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 300ms var(--ease-out);
+}
+.btn-more--pulse {
+  animation: btn-shimmer 3s infinite linear, btn-pulse-gold 2.2s infinite ease-in-out, btn-shake 2s infinite ease-in-out;
+}
+.btn-more:hover {
+  background: var(--ds-yellow);
+  color: var(--ds-black);
+  border-color: var(--ds-yellow);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 10px 30px rgba(204, 153, 0, 0.45);
+  animation: none;
+}
+.btn-more svg {
+  transition: transform 250ms var(--ease-out);
+}
+.btn-more:hover svg {
+  transform: scale(1.2);
+}
+
+@keyframes btn-pulse-gold {
+  0% {
+    box-shadow: 0 0 0 0 rgba(204, 153, 0, 0.5), inset 0 0 0 0 rgba(255, 255, 255, 0.05);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(204, 153, 0, 0), inset 0 0 8px rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(204, 153, 0, 0), inset 0 0 0 0 rgba(255, 255, 255, 0.05);
+  }
+}
+
+@keyframes btn-shimmer {
+  0% {
+    background-position: 150% 0;
+  }
+  100% {
+    background-position: -150% 0;
+  }
+}
+
+@keyframes btn-shake {
+  0%, 88%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  90% {
+    transform: rotate(-3deg) scale(1.03);
+  }
+  92% {
+    transform: rotate(3deg) scale(1.03);
+  }
+  94% {
+    transform: rotate(-3deg) scale(1.03);
+  }
+  96% {
+    transform: rotate(3deg) scale(1.03);
+  }
+  98% {
+    transform: rotate(0deg) scale(1.03);
+  }
+}
 
 .logo-wall {
   margin-top: 64px;

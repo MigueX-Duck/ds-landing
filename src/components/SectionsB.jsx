@@ -14,21 +14,21 @@ const PORTFOLIO = [
   { id: 'p8', cat: 'ads', label: 'Meta · Q1 Campaign', art: 'art-8' },
   { id: 'p9', cat: 'software', label: 'Pittier · DTC Store', art: 'art-9', span: 'wide' },
   { id: 'p10', cat: 'activations', label: 'Stattoos · Pop-Up', art: 'art-10' },
-  { id: 'p11', cat: 'activations', label: 'JB\'s Burgers · Golf Team', img: '/assets/portfolio/jb-golf-1.jpg' },
+  { id: 'p11', cat: 'activations', label: 'JB\'s Burgers · Event Branding', img: '/assets/portfolio/jb-golf-1.jpg' },
   { id: 'p12', cat: 'activations', label: 'JB\'s Burgers · Event Branding', img: '/assets/portfolio/jb-golf-2.jpg', span: 'wide', hideFromAll: true },
-  { id: 'p13', cat: 'activations', label: 'JB\'s Burgers · Brand Experience', img: '/assets/portfolio/jb-golf-3.jpg', hideFromAll: true },
+  { id: 'p13', cat: 'activations', label: 'JB\'s Burgers · Event Branding', img: '/assets/portfolio/jb-golf-3.jpg', hideFromAll: true },
   { id: 'p14', cat: 'design', label: 'JB\'s Burgers · Social Media', img: '/assets/portfolio/diseno/design-3.jpg', hideFromAll: true },
   { id: 'p15', cat: 'design', label: 'Hi-Tec · Packaging', img: '/assets/portfolio/diseno/design-7.jpg', hideFromAll: true },
-  { id: 'p16', cat: 'design', label: 'Tarantula · Variety', img: '/assets/portfolio/diseno/design-9.jpg', hideFromAll: true },
-  { id: 'p17', cat: 'design', label: 'Super Bowl · Promo', img: '/assets/portfolio/diseno/design-8.jpg', hideFromAll: true },
-  { id: 'p18', cat: 'design', label: 'Nomad · Features', img: '/assets/portfolio/diseno/design-6.jpg', hideFromAll: true },
-  { id: 'p19', cat: 'design', label: 'Pho · Social Graphics', img: '/assets/portfolio/diseno/design-4.jpg', hideFromAll: true },
+  { id: 'p16', cat: 'design', label: 'Hi-Tec · Variety', img: '/assets/portfolio/diseno/design-9.jpg', hideFromAll: true },
+  { id: 'p17', cat: 'design', label: 'JB\'s Burgers · Super Bowl Promo', img: '/assets/portfolio/diseno/design-8.jpg', hideFromAll: true },
+  { id: 'p18', cat: 'design', label: 'Hi-Tec · Features', img: '/assets/portfolio/diseno/design-6.jpg', hideFromAll: true },
+  { id: 'p19', cat: 'design', label: 'Tacos El Güero · Social Graphics', img: '/assets/portfolio/diseno/design-4.jpg', hideFromAll: true },
   { id: 'p20', cat: 'design', label: 'Duck Studios · Mother\'s Day', img: '/assets/portfolio/diseno/design-5.jpg', hideFromAll: true },
-  { id: 'p21', cat: 'design', label: 'Pho · Campaign', img: '/assets/portfolio/diseno/design-10.jpg', hideFromAll: true },
-  { id: 'p22', cat: 'design', label: 'Pho · Visuals', img: '/assets/portfolio/diseno/design-11.jpg', hideFromAll: true },
-  { id: 'p23', cat: 'design', label: 'Pho · Content', img: '/assets/portfolio/diseno/design-12.jpg', hideFromAll: true },
-  { id: 'p24', cat: 'design', label: 'Pho · Lifestyle', img: '/assets/portfolio/diseno/design-13.jpg', hideFromAll: true },
-  { id: 'p25', cat: 'design', label: 'Pho · Interior', img: '/assets/portfolio/diseno/design-14.jpg', hideFromAll: true },
+  { id: 'p21', cat: 'design', label: 'Pepperoni\'s · Campaign', img: '/assets/portfolio/diseno/design-10.jpg', hideFromAll: true },
+  { id: 'p22', cat: 'design', label: 'Pepperoni\'s · Visuals', img: '/assets/portfolio/diseno/design-11.jpg', hideFromAll: true },
+  { id: 'p23', cat: 'design', label: 'Pepperoni\'s · Content', img: '/assets/portfolio/diseno/design-12.jpg', hideFromAll: true },
+  { id: 'p24', cat: 'design', label: 'Pepperoni\'s · Lifestyle', img: '/assets/portfolio/diseno/design-13.jpg', hideFromAll: true },
+  { id: 'p25', cat: 'design', label: 'Pepperoni\'s · Promo', img: '/assets/portfolio/diseno/design-14.jpg', hideFromAll: true },
   { id: 'p26', cat: 'av', label: 'Rest Zone · Reel', video: '/assets/portfolio/audiovisual/suite-ingles.mp4', img: '/assets/portfolio/audiovisual/suite-ingles-preview.png', span: 'tall' },
   { id: 'p27', cat: 'av', label: 'Pepperoni\'s · World Pizza Day', video: '/assets/portfolio/audiovisual/pepperoni-pizza-reel.mp4', img: '/assets/portfolio/audiovisual/pepperoni-pizza-preview.png', span: 'tall' }
 ];
@@ -57,10 +57,10 @@ export function Portfolio({ lang, openLightbox }) {
         </div>
         <div className="filters">
           {FILTERS.map((f) =>
-          <button
-            key={f.id}
-            className={"filter-pill" + (filter === f.id ? " active" : "")}
-            onClick={() => setFilter(f.id)}>
+            <button
+              key={f.id}
+              className={"filter-pill" + (filter === f.id ? " active" : "")}
+              onClick={() => setFilter(f.id)}>
               {t(f.key, lang)}
             </button>
           )}
@@ -118,7 +118,7 @@ export function Stories({ lang }) {
 
         <div className="stories__grid">
           {stories.map((s, i) =>
-          <article className="story" key={i}>
+            <article className="story" key={i}>
               <div className="story__head">
                 <span className="story__client">{t(s.client, lang)}</span>
                 <span className="story__industry">{t(s.industry, lang)}</span>
@@ -126,11 +126,11 @@ export function Stories({ lang }) {
               <h3 className="story__headline">{t(s.h, lang)}</h3>
               <div className="metric-pills">
                 {s.metrics.map((m, j) =>
-              <span key={j} className="metric-pill">
+                  <span key={j} className="metric-pill">
                     <CounterOnScroll target={m.v} suffix={m.suf} />
                     <span className="label">{m.label[lang]}</span>
                   </span>
-              )}
+                )}
               </div>
               <p className="story__result">"{t(s.r, lang)}"</p>
             </article>
@@ -155,7 +155,7 @@ export function DashArt({ kind = 'bars' }) {
           <path d="M0,150 C 50,140 90,90 140,100 C 200,115 240,40 300,60 C 340,75 380,30 400,20 L 400,200 L 0,200 Z" fill="url(#lg)" />
           <path d="M0,150 C 50,140 90,90 140,100 C 200,115 240,40 300,60 C 340,75 380,30 400,20" fill="none" stroke="#FFBC00" strokeWidth="3" />
           {[[0, 150], [140, 100], [200, 115], [300, 60], [400, 20]].map((p, i) =>
-          <circle key={i} cx={p[0]} cy={p[1]} r="4" fill="#FFBC00" />
+            <circle key={i} cx={p[0]} cy={p[1]} r="4" fill="#FFBC00" />
           )}
         </svg>
       </div>);
@@ -177,16 +177,16 @@ export function Dashboards({ lang, openLightbox }) {
     { id: 'd2', t: 'd2_title', s: 'd2_sub', kind: 'line', metric: { v: '+312%', label: { en: 'Conversions', es: 'Conversiones' } } },
     { id: 'd3', t: 'd3_title', s: 'd3_sub', kind: 'line', metric: { v: '47%', label: { en: 'Open rate', es: 'Apertura' } } },
     { id: 'd4', t: 'd4_title', s: 'd4_sub', kind: 'bars', metric: { v: '$0.18', label: { en: 'CPC', es: 'CPC' } } },
-    { 
-      id: 'd5', t: 'd5_title', s: 'd5_sub', kind: 'line', 
+    {
+      id: 'd5', t: 'd5_title', s: 'd5_sub', kind: 'line',
       metric: { v: '2,095', label: { en: 'Conversations', es: 'Conversaciones' } },
       extra: [
         { v: '₡448', label: { en: 'Cost per conv.', es: 'Costo por conv.' } },
         { v: '₡937K', label: { en: 'Spent', es: 'Inversión' } }
       ]
     },
-    { 
-      id: 'd6', t: 'd6_title', s: 'd6_sub', kind: 'line', 
+    {
+      id: 'd6', t: 'd6_title', s: 'd6_sub', kind: 'line',
       metric: { v: '74', label: { en: 'Leads', es: 'Leads' } },
       extra: [
         { v: '$12.37', label: { en: 'Cost per lead', es: 'Costo por lead' } },
@@ -204,7 +204,7 @@ export function Dashboards({ lang, openLightbox }) {
 
         <div className="dashboards__grid">
           {dashes.map((d) =>
-          <div key={d.id} className="dashboard" onClick={() => openLightbox({ kind: 'dashboard', item: d, lang })}>
+            <div key={d.id} className="dashboard" onClick={() => openLightbox({ kind: 'dashboard', item: d, lang })}>
               <DashArt kind={d.kind} />
               <div className="dashboard__metric">
                 <span className="small">{d.metric.label[lang]}</span>
@@ -224,11 +224,28 @@ export function Dashboards({ lang, openLightbox }) {
 
 export function Social({ lang }) {
   const ref = useReveal();
+  const [showAll, setShowAll] = React.useState(false);
   const ts = [
-    { q: 't1_quote', n: 't1_name', r: 't1_role', s: 't1_stat' },
-    { q: 't2_quote', n: 't2_name', r: 't2_role', s: 't2_stat' },
-    { q: 't3_quote', n: 't3_name', r: 't3_role', s: 't3_stat' }
+    { q: 't1_quote', n: 't1_name', r: 't1_role', s: 't1_stat', link: 'https://www.instagram.com/peperonnisexpresscr/' },
+    { q: 't2_quote', n: 't2_name', r: 't2_role', s: 't2_stat', link: 'https://www.instagram.com/pradalabcr/' },
+    { q: 't3_quote', n: 't3_name', r: 't3_role', s: 't3_stat', link: 'https://www.instagram.com/pradadent/' },
+    { q: 't4_quote', n: 't4_name', r: 't4_role', s: 't4_stat', link: 'https://www.instagram.com/allanghm/' },
+    { q: 't5_quote', n: 't5_name', r: 't5_role', s: 't5_stat', link: 'https://www.instagram.com/innoviahealthcare/' },
+    { q: 't6_quote', n: 't6_name', r: 't6_role', s: 't6_stat', link: 'https://www.instagram.com/hitec_cr/' },
+    { q: 't7_quote', n: 't7_name', r: 't7_role', s: 't7_stat', link: 'https://www.instagram.com/funinaboxcr/' },
+    {
+      q: 't8_quote', n: 't8_name', r: 't8_role', s: 't8_stat',
+      links: [
+        { label: 'Prada Lab', url: 'https://www.instagram.com/pradalabcr/' },
+        { label: 'Prada Dent', url: 'https://www.instagram.com/pradadent/' }
+      ]
+    },
+    { q: 't9_quote', n: 't9_name', r: 't9_role', s: 't9_stat', link: 'https://www.instagram.com/umifemcr/' },
+    { q: 't10_quote', n: 't10_name', r: 't10_role', s: 't10_stat', link: 'https://www.instagram.com/drope2886/' },
+    { q: 't11_quote', n: 't11_name', r: 't11_role', s: 't11_stat', link: 'https://www.instagram.com/wmonge01/' },
+    { q: 't12_quote', n: 't12_name', r: 't12_role', s: 't12_stat', link: 'https://www.instagram.com/figuerana/' }
   ];
+  const visibleTs = showAll ? ts : ts.slice(0, 4);
 
   const logos = [
     { src: '/assets/clients/dds.png' },
@@ -256,18 +273,59 @@ export function Social({ lang }) {
         <p className="lead">{t('social_lead', lang)}</p>
 
         <div className="testimonials">
-          {ts.map((x, i) => {
+          {visibleTs.map((x, i) => {
             const stat = t(x.s, lang);
             const parts = stat.split(' ');
             return (
               <article className="testimonial" key={i}>
                 <p className="testimonial__quote">"{t(x.q, lang)}"</p>
-                <div className="testimonial__author">{t(x.n, lang)}</div>
+                <div className="testimonial__author">
+                  {x.links ? (
+                    <>
+                      <span>{t(x.n, lang)}</span>
+                      <span className="testimonial__author-sep"> · </span>
+                      <span className="testimonial__author-links">
+                        {x.links.map((lnk, idx) => (
+                          <React.Fragment key={idx}>
+                            {idx > 0 && " & "}
+                            <a href={lnk.url} target="_blank" rel="noopener noreferrer" className="testimonial__link">
+                              {lnk.label}
+                            </a>
+                          </React.Fragment>
+                        ))}
+                      </span>
+                    </>
+                  ) : x.link ? (
+                    <a href={x.link} target="_blank" rel="noopener noreferrer" className="testimonial__link">
+                      {t(x.n, lang)}
+                    </a>
+                  ) : (
+                    t(x.n, lang)
+                  )}
+                </div>
                 <div className="testimonial__role">{t(x.r, lang)}</div>
                 <div className="testimonial__stat"><span className="y">{parts[0]}</span> {parts.slice(1).join(' ')}</div>
               </article>);
           })}
         </div>
+
+        {ts.length > 4 && (
+          <div className="testimonials__actions">
+            <button className={`btn-more ${!showAll ? 'btn-more--pulse' : ''}`} onClick={() => setShowAll(!showAll)}>
+              {showAll ? (
+                <>
+                  {t('social_show_less', lang)}
+                  <Icon.ChevronUp />
+                </>
+              ) : (
+                <>
+                  {t('social_show_more', lang)}
+                  <Icon.ChevronDown />
+                </>
+              )}
+            </button>
+          </div>
+        )}
 
         <div className="logo-wall">
           {logos.map((l, i) =>
@@ -297,7 +355,7 @@ export function Risk({ lang }) {
 
         <div className="risk__grid">
           {qa.map((x, i) =>
-          <div key={i} className="qa">
+            <div key={i} className="qa">
               <p className="qa__q">{t(x.q, lang)}</p>
               <p className="qa__a">{t(x.a, lang)}</p>
             </div>
@@ -348,10 +406,10 @@ export function Closing({ lang }) {
 
 export function Lightbox({ data, onClose }) {
   React.useEffect(() => {
-    const onKey = (e) => {if (e.key === 'Escape') onClose();};
+    const onKey = (e) => { if (e.key === 'Escape') onClose(); };
     window.addEventListener('keydown', onKey);
     document.body.style.overflow = 'hidden';
-    return () => {window.removeEventListener('keydown', onKey);document.body.style.overflow = '';};
+    return () => { window.removeEventListener('keydown', onKey); document.body.style.overflow = ''; };
   }, [onClose]);
 
   if (!data) return null;
@@ -375,11 +433,11 @@ export function Lightbox({ data, onClose }) {
         </div>
         <div className="lightbox__caption">
           {kind === 'portfolio' ?
-          <>
+            <>
               <h4>{item.label}</h4>
               <p>{lang === 'en' ? 'Project preview — click outside to close.' : 'Vista previa — haz clic fuera para cerrar.'}</p>
             </> :
-          <>
+            <>
               <h4>{t(item.t, lang)}</h4>
               <p>
                 {t(item.s, lang)} · {item.metric.label[lang]}: <strong style={{ color: 'var(--ds-yellow)' }}>{item.metric.v}</strong>

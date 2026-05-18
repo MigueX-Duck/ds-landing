@@ -84,7 +84,7 @@ export function Hero({ lang }) {
         </div>
       </div>
 
-      <div className="scroll-indicator" style={{ margin: "300px 0px 0px" }}>
+      <div className="scroll-indicator">
         <span>{t('scroll_more', lang)}</span>
         <div className="scroll-indicator__line"></div>
       </div>
@@ -96,7 +96,7 @@ export function WhoWeAre({ lang }) {
   const team = [
   { initials: "RB", img: "/assets/team/rachel-basulto.webp", name: "Rachel Basulto", role: { en: "Founder & CEO", es: "Fundadora & CEO" } },
   { initials: "VL", img: "/assets/team/valeria-leiva.webp", name: "Valeria Leiva", role: { en: "Creative Director", es: "Directora Creativa" } },
-  { initials: "FA", img: "/assets/team/fabio-apu.webp", name: "Fabio Apu", role: { en: "Paid Media Specialist", es: "Especialista en Paid Media" } }];
+  { initials: "FA", img: "/assets/team/fabio-apu.webp", name: "Fabio Apu", role: { en: "Head of Marketing", es: "Director de Marketing" } }];
 
   return (
     <section className="section who section--black" id="team">
