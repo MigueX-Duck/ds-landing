@@ -4,16 +4,8 @@ import { Icon } from './Icons';
 import { useReveal, CounterOnScroll } from './Common';
 
 const PORTFOLIO = [
-  { id: 'p1', cat: 'av', label: 'Stattoos · Brand Film', art: 'art-1', span: 'tall' },
   { id: 'p2', cat: 'design', label: 'Pho · Social Media', img: '/assets/portfolio/diseno/design-1.jpg' },
-  { id: 'p3', cat: 'activations', label: 'BAC · Brand Activation', art: 'art-3', span: 'wide' },
-  { id: 'p4', cat: 'software', label: 'Innovia HealthCare · Platform', art: 'art-4' },
-  { id: 'p5', cat: 'ads', label: 'Pittier · Spark Ads', art: 'art-5', span: 'tall' },
-  { id: 'p6', cat: 'av', label: 'Umifem · Reel Series', art: 'art-6' },
   { id: 'p7', cat: 'design', label: 'Pho · Social Media', img: '/assets/portfolio/diseno/design-2.jpg' },
-  { id: 'p8', cat: 'ads', label: 'Meta · Q1 Campaign', art: 'art-8' },
-  { id: 'p9', cat: 'software', label: 'Pittier · DTC Store', art: 'art-9', span: 'wide' },
-  { id: 'p10', cat: 'activations', label: 'Stattoos · Pop-Up', art: 'art-10' },
   { id: 'p11', cat: 'activations', label: 'JB\'s Burgers · Event Branding', img: '/assets/portfolio/jb-golf-1.jpg' },
   { id: 'p12', cat: 'activations', label: 'JB\'s Burgers · Event Branding', img: '/assets/portfolio/jb-golf-2.jpg', span: 'wide', hideFromAll: true },
   { id: 'p13', cat: 'activations', label: 'JB\'s Burgers · Event Branding', img: '/assets/portfolio/jb-golf-3.jpg', hideFromAll: true },
@@ -51,8 +43,7 @@ const FILTERS = [
   { id: 'all', key: 'filter_all' },
   { id: 'av', key: 'filter_av' },
   { id: 'design', key: 'filter_design' },
-  { id: 'activations', key: 'filter_activations' },
-  { id: 'ads', key: 'filter_ads' }
+  { id: 'activations', key: 'filter_activations' }
 ];
 
 export function Portfolio({ lang, openLightbox }) {
@@ -204,22 +195,9 @@ export function Dashboards({ lang, openLightbox }) {
     { id: 'd2', t: 'd2_title', s: 'd2_sub', kind: 'line', metric: { v: '+312%', label: { en: 'Conversions', es: 'Conversiones' } } },
     { id: 'd3', t: 'd3_title', s: 'd3_sub', kind: 'line', metric: { v: '47%', label: { en: 'Open rate', es: 'Apertura' } } },
     { id: 'd4', t: 'd4_title', s: 'd4_sub', kind: 'bars', metric: { v: '$0.18', label: { en: 'CPC', es: 'CPC' } } },
-    {
-      id: 'd5', t: 'd5_title', s: 'd5_sub', kind: 'line',
-      metric: { v: '2,095', label: { en: 'Conversations', es: 'Conversaciones' } },
-      extra: [
-        { v: '₡448', label: { en: 'Cost per conv.', es: 'Costo por conv.' } },
-        { v: '₡937K', label: { en: 'Spent', es: 'Inversión' } }
-      ]
-    },
-    {
-      id: 'd6', t: 'd6_title', s: 'd6_sub', kind: 'line',
-      metric: { v: '74', label: { en: 'Leads', es: 'Leads' } },
-      extra: [
-        { v: '$12.37', label: { en: 'Cost per lead', es: 'Costo por lead' } },
-        { v: '$915', label: { en: 'Spent', es: 'Inversión' } }
-      ]
-    }
+    { id: 'd5', tRaw: 'Meta Ads', sRaw: 'Masividad', kind: 'line', img: '/assets/portfolio/meta/meta1.jpeg', metric: { v: '2,095', label: { en: 'Conversations Started', es: 'Conversaciones Iniciadas' } } },
+    { id: 'd6', tRaw: 'Meta Ads', sRaw: 'Conversiones · High Ticket', kind: 'bars', img: '/assets/portfolio/meta/meta2.jpeg', metric: { v: '$12.37', label: { en: 'Cost per lead', es: 'Costo por lead' } } },
+    { id: 'd7', tRaw: 'Google Ads · Conversiones', sRaw: 'High Ticket', kind: 'line', img: '/assets/portfolio/meta/meta3.png', metric: { v: '52', label: { en: 'Conversions · $185 CPL', es: 'Conversiones · $185 CPL' } } }
   ];
 
   return (
@@ -238,8 +216,8 @@ export function Dashboards({ lang, openLightbox }) {
                 {d.metric.v}
               </div>
               <div className="dashboard__caption">
-                <span className="sub">{t(d.s, lang)}</span>
-                {t(d.t, lang)}
+                <span className="sub">{d.sRaw || t(d.s, lang)}</span>
+                {d.tRaw || t(d.t, lang)}
               </div>
               <div className="dashboard__zoom"><Icon.ZoomIn /></div>
             </div>
@@ -456,7 +434,7 @@ export function Lightbox({ data, onClose }) {
                   <div className={"tile__art " + (item.art || "")}>{item.label.split('·')[0].trim()}</div>
                 )
             ) :
-            <DashArt kind={item.kind} />
+            (item.img ? <img src={item.img} alt="" className="lightbox__img" style={{maxHeight: '70vh'}} /> : <DashArt kind={item.kind} />)
           }
           {kind === 'portfolio' && <span className="lightbox__cat">{t('filter_' + item.cat, lang)}</span>}
         </div>
@@ -467,9 +445,9 @@ export function Lightbox({ data, onClose }) {
               <p>{lang === 'en' ? 'Project preview — click outside to close.' : 'Vista previa — haz clic fuera para cerrar.'}</p>
             </> :
             <>
-              <h4>{t(item.t, lang)}</h4>
+              <h4>{item.tRaw || t(item.t, lang)}</h4>
               <p>
-                {t(item.s, lang)} · {item.metric.label[lang]}: <strong style={{ color: 'var(--ds-yellow)' }}>{item.metric.v}</strong>
+                {item.sRaw || t(item.s, lang)} · {item.metric.label[lang]}: <strong style={{ color: 'var(--ds-yellow)' }}>{item.metric.v}</strong>
                 {item.extra && item.extra.map((ex, i) => (
                   <React.Fragment key={i}>
                     {" · "}{ex.label[lang]}: <strong style={{ color: 'var(--ds-yellow)' }}>{ex.v}</strong>
