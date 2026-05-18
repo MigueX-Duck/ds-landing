@@ -36,7 +36,8 @@ const PORTFOLIO = [
   { id: 'p39', cat: 'activations', label: 'BAC · Workshop', img: '/assets/portfolio/activaciones/562445077_18064815947587648_5667741104672476160_n.webp', hideFromAll: true },
   { id: 'p40', cat: 'activations', label: 'BAC · Workshop', img: '/assets/portfolio/activaciones/562795433_18064815920587648_3872430261450459819_n.webp', span: 'wide', hideFromAll: true },
   { id: 'p41', cat: 'activations', label: 'BAC · Workshop', img: '/assets/portfolio/activaciones/562860414_18064815911587648_1403026327103440349_n.webp', hideFromAll: true },
-  { id: 'p42', cat: 'activations', label: 'BAC · Workshop', img: '/assets/portfolio/activaciones/563751639_18064815929587648_1441748058425124453_n.webp', hideFromAll: true }
+  { id: 'p42', cat: 'activations', label: 'BAC · Workshop', img: '/assets/portfolio/activaciones/563751639_18064815929587648_1441748058425124453_n.webp', hideFromAll: true },
+  { id: 'p45', cat: 'activations', label: 'Hi-Tec · Lanzamiento Guatemala', driveUrl: 'https://drive.google.com/file/d/1NTfvXmIXRuIksngQslPLHfbhTteyR4RC/preview', img: '/assets/portfolio/activaciones/hitec1-preview.png', span: 'tall' }
 ];
 
 const FILTERS = [
@@ -191,13 +192,9 @@ export function DashArt({ kind = 'bars' }) {
 export function Dashboards({ lang, openLightbox }) {
   const ref = useReveal();
   const dashes = [
-    { id: 'd1', t: 'd1_title', s: 'd1_sub', kind: 'bars', metric: { v: '8.3×', label: { en: 'ROAS', es: 'ROAS' } } },
-    { id: 'd2', t: 'd2_title', s: 'd2_sub', kind: 'line', metric: { v: '+312%', label: { en: 'Conversions', es: 'Conversiones' } } },
-    { id: 'd3', t: 'd3_title', s: 'd3_sub', kind: 'line', metric: { v: '47%', label: { en: 'Open rate', es: 'Apertura' } } },
-    { id: 'd4', t: 'd4_title', s: 'd4_sub', kind: 'bars', metric: { v: '$0.18', label: { en: 'CPC', es: 'CPC' } } },
-    { id: 'd5', tRaw: 'Meta Ads', sRaw: 'Masividad', kind: 'line', img: '/assets/portfolio/meta/meta1.jpeg', metric: { v: '2,095', label: { en: 'Conversations Started', es: 'Conversaciones Iniciadas' } } },
-    { id: 'd6', tRaw: 'Meta Ads', sRaw: 'Conversiones · High Ticket', kind: 'bars', img: '/assets/portfolio/meta/meta2.jpeg', metric: { v: '$12.37', label: { en: 'Cost per lead', es: 'Costo por lead' } } },
-    { id: 'd7', tRaw: 'Google Ads · Conversiones', sRaw: 'High Ticket', kind: 'line', img: '/assets/portfolio/meta/meta3.png', metric: { v: '52', label: { en: 'Conversions · $185 CPL', es: 'Conversiones · $185 CPL' } } }
+    { id: 'd5', tRaw: 'Masividad', sRaw: 'Meta Ads', kind: 'img', img: '/assets/portfolio/meta/meta1.jpeg', metric: { v: '2,095', label: { en: 'CONVERSACIONES INICIADAS', es: 'CONVERSACIONES INICIADAS' } } },
+    { id: 'd6', tRaw: 'Conversiones · High Ticket', sRaw: 'Meta Ads', kind: 'img', img: '/assets/portfolio/meta/meta2.jpeg', metric: { v: '$12.37', label: { en: 'COSTO POR LEAD', es: 'COSTO POR LEAD' } } },
+    { id: 'd7', tRaw: 'Google Ads · Conversiones · High Ticket', sRaw: '', kind: 'img', img: '/assets/portfolio/meta/meta3.png', metric: { v: '52 CONVERSIONES', label: { en: '· $185 CPL', es: '· $185 CPL' } } }
   ];
 
   return (
@@ -210,13 +207,14 @@ export function Dashboards({ lang, openLightbox }) {
         <div className="dashboards__grid">
           {dashes.map((d) =>
             <div key={d.id} className="dashboard" onClick={() => openLightbox({ kind: 'dashboard', item: d, lang })}>
-              <DashArt kind={d.kind} />
+              {d.img ? <img src={d.img} alt="" style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover'}} /> : <DashArt kind={d.kind} />}
               <div className="dashboard__metric">
                 <span className="small">{d.metric.label[lang]}</span>
                 {d.metric.v}
               </div>
-              <div className="dashboard__caption">
-                <span className="sub">{d.sRaw || t(d.s, lang)}</span>
+              <div className="dashboard__caption" style={{ background: 'rgba(11, 14, 23, 0.85)', padding: '10px 15px', borderRadius: '8px' }}>
+                {d.sRaw && <span className="sub">{d.sRaw}</span>}
+                {!d.sRaw && d.s && <span className="sub">{t(d.s, lang)}</span>}
                 {d.tRaw || t(d.t, lang)}
               </div>
               <div className="dashboard__zoom"><Icon.ZoomIn /></div>
