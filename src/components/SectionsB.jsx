@@ -17,17 +17,17 @@ const PORTFOLIO = [
   { id: 'p11', cat: 'activations', label: 'JB\'s Burgers · Event Branding', img: '/assets/portfolio/jb-golf-1.jpg' },
   { id: 'p12', cat: 'activations', label: 'JB\'s Burgers · Event Branding', img: '/assets/portfolio/jb-golf-2.jpg', span: 'wide', hideFromAll: true },
   { id: 'p13', cat: 'activations', label: 'JB\'s Burgers · Event Branding', img: '/assets/portfolio/jb-golf-3.jpg', hideFromAll: true },
-  { id: 'p14', cat: 'design', label: 'JB\'s Burgers · Social Media', img: '/assets/portfolio/diseno/design-3.jpg', hideFromAll: true },
+  { id: 'p14', cat: 'design', label: 'JB\'s Burgers · Social Media', img: '/assets/portfolio/diseno/design-3.jpg', span: 'tall', hideFromAll: true },
   { id: 'p15', cat: 'design', label: 'Hi-Tec · Packaging', img: '/assets/portfolio/diseno/design-7.jpg', hideFromAll: true },
-  { id: 'p16', cat: 'design', label: 'Hi-Tec · Variety', img: '/assets/portfolio/diseno/design-9.jpg', hideFromAll: true },
-  { id: 'p17', cat: 'design', label: 'JB\'s Burgers · Super Bowl Promo', img: '/assets/portfolio/diseno/design-8.jpg', hideFromAll: true },
-  { id: 'p18', cat: 'design', label: 'Hi-Tec · Features', img: '/assets/portfolio/diseno/design-6.jpg', hideFromAll: true },
+  { id: 'p16', cat: 'design', label: 'Hi-Tec · Variety', img: '/assets/portfolio/diseno/design-9.jpg', span: 'tall', hideFromAll: true },
+  { id: 'p17', cat: 'design', label: 'JB\'s Burgers · Super Bowl Promo', img: '/assets/portfolio/diseno/design-8.jpg', span: 'wide', hideFromAll: true },
+  { id: 'p18', cat: 'design', label: 'Hi-Tec · Features', img: '/assets/portfolio/diseno/design-6.jpg', span: 'wide', hideFromAll: true },
   { id: 'p19', cat: 'design', label: 'Tacos El Güero · Social Graphics', img: '/assets/portfolio/diseno/design-4.jpg', hideFromAll: true },
   { id: 'p20', cat: 'design', label: 'Duck Studios · Mother\'s Day', img: '/assets/portfolio/diseno/design-5.jpg', hideFromAll: true },
   { id: 'p21', cat: 'design', label: 'Pepperoni\'s · Campaign', img: '/assets/portfolio/diseno/design-10.jpg', hideFromAll: true },
-  { id: 'p22', cat: 'design', label: 'Pepperoni\'s · Visuals', img: '/assets/portfolio/diseno/design-11.jpg', hideFromAll: true },
+  { id: 'p22', cat: 'design', label: 'Pepperoni\'s · Visuals', img: '/assets/portfolio/diseno/design-11.jpg', span: 'tall', hideFromAll: true },
   { id: 'p23', cat: 'design', label: 'Pepperoni\'s · Content', img: '/assets/portfolio/diseno/design-12.jpg', hideFromAll: true },
-  { id: 'p24', cat: 'design', label: 'Pepperoni\'s · Lifestyle', img: '/assets/portfolio/diseno/design-13.jpg', hideFromAll: true },
+  { id: 'p24', cat: 'design', label: 'Pepperoni\'s · Lifestyle', img: '/assets/portfolio/diseno/design-13.jpg', span: 'wide', hideFromAll: true },
   { id: 'p25', cat: 'design', label: 'Pepperoni\'s · Promo', img: '/assets/portfolio/diseno/design-14.jpg', hideFromAll: true },
   { id: 'p26', cat: 'av', label: 'Rest Zone · Reel', video: '/assets/portfolio/audiovisual/suite-ingles.mp4', img: '/assets/portfolio/audiovisual/suite-ingles-preview.png', span: 'tall' },
   { id: 'p27', cat: 'av', label: 'Pepperoni\'s · World Pizza Day', video: '/assets/portfolio/audiovisual/pepperoni-pizza-reel.mp4', img: '/assets/portfolio/audiovisual/pepperoni-pizza-preview.png', span: 'tall' },
@@ -35,7 +35,16 @@ const PORTFOLIO = [
   { id: 'p30', cat: 'av', label: 'INNOVIA · Success Stories', driveUrl: 'https://drive.google.com/file/d/1oAL1LLmDG8C41KBUJrrr4cRXWRMWd0Pg/preview', img: '/assets/portfolio/audiovisual/TestimoniosMMA-preview.jpeg', span: 'tall' },
   { id: 'p31', cat: 'av', label: 'UMIFEM · Expert Reel', driveUrl: 'https://drive.google.com/file/d/1s8E_81rwAABlejrJaHQEzHUIATRw8D-0/preview', img: '/assets/portfolio/audiovisual/medico-preview.png', span: 'tall' },
   { id: 'p32', cat: 'av', label: 'Stattoos · Brand Reel', driveUrl: 'https://drive.google.com/file/d/1iRQkoAu6JSQ8QxeiMrxw26nay-zukDoA/preview', img: '/assets/portfolio/audiovisual/statoo1-preview.png', span: 'tall' },
-  { id: 'p33', cat: 'av', label: '1949 · Brand Reel', driveUrl: 'https://drive.google.com/file/d/1mhtF-c7NgTAMuvrBk1vKcWz7o0VCZqgF/preview', img: '/assets/portfolio/audiovisual/1949-preview.png', span: 'tall' }
+  { id: 'p33', cat: 'av', label: '1949 · Brand Reel', driveUrl: 'https://drive.google.com/file/d/1mhtF-c7NgTAMuvrBk1vKcWz7o0VCZqgF/preview', img: '/assets/portfolio/audiovisual/1949-preview.png', span: 'tall' },
+  { id: 'p34', cat: 'av', label: 'Pepperoni\'s · Brand Video', driveUrl: 'https://drive.google.com/file/d/1kbnjBZenLYAYVonJbi8h2x284paaFq80/preview', img: '/assets/portfolio/audiovisual/peperoni1-preview.png', span: 'wide' },
+  { id: 'p35', cat: 'design', label: 'Fun In A Box · Social Media', img: '/assets/portfolio/diseno/design-15.png', span: 'tall', hideFromAll: true },
+  { id: 'p36', cat: 'av', label: 'Pepperoni\'s · Promo Spot', driveUrl: 'https://drive.google.com/file/d/111qAa2pTqUZ1BArpFQuh5npWgaGIS-Xf/preview', img: '/assets/portfolio/audiovisual/peperoni1-preview.png' },
+  { id: 'p37', cat: 'activations', label: 'BAC · Workshop', img: '/assets/portfolio/activaciones/561993576_18064815938587648_4610743671301470364_n.webp' },
+  { id: 'p38', cat: 'activations', label: 'BAC · Workshop', img: '/assets/portfolio/activaciones/562030872_18064815902587648_3642112007552418815_n.webp', span: 'tall', hideFromAll: true },
+  { id: 'p39', cat: 'activations', label: 'BAC · Workshop', img: '/assets/portfolio/activaciones/562445077_18064815947587648_5667741104672476160_n.webp', hideFromAll: true },
+  { id: 'p40', cat: 'activations', label: 'BAC · Workshop', img: '/assets/portfolio/activaciones/562795433_18064815920587648_3872430261450459819_n.webp', span: 'wide', hideFromAll: true },
+  { id: 'p41', cat: 'activations', label: 'BAC · Workshop', img: '/assets/portfolio/activaciones/562860414_18064815911587648_1403026327103440349_n.webp', hideFromAll: true },
+  { id: 'p42', cat: 'activations', label: 'BAC · Workshop', img: '/assets/portfolio/activaciones/563751639_18064815929587648_1441748058425124453_n.webp', hideFromAll: true }
 ];
 
 const FILTERS = [
@@ -43,7 +52,6 @@ const FILTERS = [
   { id: 'av', key: 'filter_av' },
   { id: 'design', key: 'filter_design' },
   { id: 'activations', key: 'filter_activations' },
-  { id: 'software', key: 'filter_software' },
   { id: 'ads', key: 'filter_ads' }
 ];
 
