@@ -32,9 +32,8 @@ const PORTFOLIO = [
   { id: 'p26', cat: 'av', label: 'Rest Zone · Reel', video: '/assets/portfolio/audiovisual/suite-ingles.mp4', img: '/assets/portfolio/audiovisual/suite-ingles-preview.png', span: 'tall' },
   { id: 'p27', cat: 'av', label: 'Pepperoni\'s · World Pizza Day', video: '/assets/portfolio/audiovisual/pepperoni-pizza-reel.mp4', img: '/assets/portfolio/audiovisual/pepperoni-pizza-preview.png', span: 'tall' },
   { id: 'p28', cat: 'av', label: 'Stattoos · Promo Video', driveUrl: 'https://drive.google.com/file/d/19qD-HcMx_eFPqn4mPr02tjRfSQDK19kg/preview', img: '/assets/portfolio/audiovisual/statto2-preview.png', span: 'wide' },
-  { id: 'p29', cat: 'av', label: 'Pepperoni\'s · Promo Spot', video: '/assets/portfolio/audiovisual/peperoni2.mp4', img: '/assets/portfolio/audiovisual/peperoni2-preview.png' },
-  { id: 'p30', cat: 'av', label: 'MMA · Success Stories', driveUrl: 'https://drive.google.com/file/d/1oAL1LLmDG8C41KBUJrrr4cRXWRMWd0Pg/preview', img: '/assets/portfolio/audiovisual/TestimoniosMMA-preview.jpeg', span: 'tall' },
-  { id: 'p31', cat: 'av', label: 'Healthcare · Expert Reel', driveUrl: 'https://drive.google.com/file/d/1s8E_81rwAABlejrJaHQEzHUIATRw8D-0/preview', img: '/assets/portfolio/audiovisual/medico-preview.png', span: 'tall' },
+  { id: 'p30', cat: 'av', label: 'INNOVIA · Success Stories', driveUrl: 'https://drive.google.com/file/d/1oAL1LLmDG8C41KBUJrrr4cRXWRMWd0Pg/preview', img: '/assets/portfolio/audiovisual/TestimoniosMMA-preview.jpeg', span: 'tall' },
+  { id: 'p31', cat: 'av', label: 'UMIFEM · Expert Reel', driveUrl: 'https://drive.google.com/file/d/1s8E_81rwAABlejrJaHQEzHUIATRw8D-0/preview', img: '/assets/portfolio/audiovisual/medico-preview.png', span: 'tall' },
   { id: 'p32', cat: 'av', label: 'Stattoos · Brand Reel', driveUrl: 'https://drive.google.com/file/d/1iRQkoAu6JSQ8QxeiMrxw26nay-zukDoA/preview', img: '/assets/portfolio/audiovisual/statoo1-preview.png', span: 'tall' },
   { id: 'p33', cat: 'av', label: '1949 · Brand Reel', driveUrl: 'https://drive.google.com/file/d/1mhtF-c7NgTAMuvrBk1vKcWz7o0VCZqgF/preview', img: '/assets/portfolio/audiovisual/1949-preview.png', span: 'tall' }
 ];
