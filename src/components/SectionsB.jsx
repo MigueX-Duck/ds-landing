@@ -30,7 +30,13 @@ const PORTFOLIO = [
   { id: 'p24', cat: 'design', label: 'Pepperoni\'s · Lifestyle', img: '/assets/portfolio/diseno/design-13.jpg', hideFromAll: true },
   { id: 'p25', cat: 'design', label: 'Pepperoni\'s · Promo', img: '/assets/portfolio/diseno/design-14.jpg', hideFromAll: true },
   { id: 'p26', cat: 'av', label: 'Rest Zone · Reel', video: '/assets/portfolio/audiovisual/suite-ingles.mp4', img: '/assets/portfolio/audiovisual/suite-ingles-preview.png', span: 'tall' },
-  { id: 'p27', cat: 'av', label: 'Pepperoni\'s · World Pizza Day', video: '/assets/portfolio/audiovisual/pepperoni-pizza-reel.mp4', img: '/assets/portfolio/audiovisual/pepperoni-pizza-preview.png', span: 'tall' }
+  { id: 'p27', cat: 'av', label: 'Pepperoni\'s · World Pizza Day', video: '/assets/portfolio/audiovisual/pepperoni-pizza-reel.mp4', img: '/assets/portfolio/audiovisual/pepperoni-pizza-preview.png', span: 'tall' },
+  { id: 'p28', cat: 'av', label: 'Stattoos · Promo Video', driveUrl: 'https://drive.google.com/file/d/19qD-HcMx_eFPqn4mPr02tjRfSQDK19kg/preview', img: '/assets/portfolio/audiovisual/statto2-preview.png', span: 'wide' },
+  { id: 'p29', cat: 'av', label: 'Pepperoni\'s · Promo Spot', video: '/assets/portfolio/audiovisual/peperoni2.mp4', img: '/assets/portfolio/audiovisual/peperoni2-preview.png' },
+  { id: 'p30', cat: 'av', label: 'MMA · Success Stories', driveUrl: 'https://drive.google.com/file/d/1oAL1LLmDG8C41KBUJrrr4cRXWRMWd0Pg/preview', img: '/assets/portfolio/audiovisual/TestimoniosMMA-preview.jpeg', span: 'tall' },
+  { id: 'p31', cat: 'av', label: 'Healthcare · Expert Reel', driveUrl: 'https://drive.google.com/file/d/1s8E_81rwAABlejrJaHQEzHUIATRw8D-0/preview', img: '/assets/portfolio/audiovisual/medico-preview.png', span: 'tall' },
+  { id: 'p32', cat: 'av', label: 'Stattoos · Brand Reel', driveUrl: 'https://drive.google.com/file/d/1iRQkoAu6JSQ8QxeiMrxw26nay-zukDoA/preview', img: '/assets/portfolio/audiovisual/statoo1-preview.png', span: 'tall' },
+  { id: 'p33', cat: 'av', label: '1949 · Brand Reel', driveUrl: 'https://drive.google.com/file/d/1mhtF-c7NgTAMuvrBk1vKcWz7o0VCZqgF/preview', img: '/assets/portfolio/audiovisual/1949-preview.png', span: 'tall' }
 ];
 
 const FILTERS = [
@@ -45,6 +51,19 @@ const FILTERS = [
 export function Portfolio({ lang, openLightbox }) {
   const [filter, setFilter] = React.useState('all');
   const ref = useReveal();
+
+  const randomAllProjects = React.useMemo(() => {
+    const allFiltered = PORTFOLIO.filter(p => !p.hideFromAll);
+    return [...allFiltered].sort(() => 0.5 - Math.random()).slice(0, 9);
+  }, []);
+
+  const displayItems = React.useMemo(() => {
+    if (filter === 'all') {
+      return randomAllProjects;
+    }
+    return PORTFOLIO.filter(p => p.cat === filter);
+  }, [filter, randomAllProjects]);
+
   return (
     <section className="section portfolio" id="work">
       <div className="container reveal" ref={ref}>
@@ -67,25 +86,26 @@ export function Portfolio({ lang, openLightbox }) {
         </div>
 
         <div className="masonry" style={{ marginTop: 32 }}>
-          {PORTFOLIO.map((p) => {
-            const visible = filter === 'all' ? !p.hideFromAll : p.cat === filter;
-            const cls = "tile" + (p.span === 'tall' ? ' tile--tall' : '') + (p.span === 'wide' ? ' tile--wide' : '') + (visible ? '' : ' hidden');
+          {displayItems.map((p) => {
+            const cls = "tile" + (p.span === 'tall' ? ' tile--tall' : '') + (p.span === 'wide' ? ' tile--wide' : '');
             return (
-              <div key={p.id} className={cls} onClick={() => visible && openLightbox({ kind: 'portfolio', item: p, lang })}>
-                <div className={"tile__art " + (p.art || (p.video ? "art-av" : ""))}>
+              <div key={p.id} className={cls} onClick={() => openLightbox({ kind: 'portfolio', item: p, lang })}>
+                <div className={"tile__art " + (p.art || (p.video || p.driveUrl ? "art-av" : ""))}>
                   {p.img && <img src={p.img} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />}
                   {!p.img && <span>{p.label.split('·')[0].trim()}</span>}
-                  {p.video && <Icon.Play style={{ position: 'absolute', width: 48, height: 48, color: 'white', opacity: 0.8, zIndex: 2 }} />}
+                  {(p.video || p.driveUrl) && <Icon.Play style={{ position: 'absolute', width: 48, height: 48, color: 'white', opacity: 0.8, zIndex: 2 }} />}
                 </div>
                 <div className="tile__overlay">
                   <span className="tile__cat">{t('filter_' + p.cat, lang)}</span>
                   <span className="tile__title">{p.label}</span>
                 </div>
-              </div>);
+              </div>
+            );
           })}
         </div>
       </div>
-    </section>);
+    </section>
+  );
 }
 
 export function Stories({ lang }) {
@@ -420,12 +440,14 @@ export function Lightbox({ data, onClose }) {
         <button className="lightbox__close" onClick={onClose} aria-label="Close"><Icon.X /></button>
         <div className="lightbox__body">
           {kind === 'portfolio' ?
-            (item.video ?
-              <video src={item.video} controls autoPlay className="lightbox__video" style={{ maxWidth: '100%', maxHeight: '100%' }} /> :
-              (item.img ?
-                <img src={item.img} alt="" className="lightbox__img" /> :
-                <div className={"tile__art " + (item.art || "")}>{item.label.split('·')[0].trim()}</div>
-              )
+            (item.driveUrl ?
+              <iframe src={item.driveUrl} width="100%" height="100%" frameBorder="0" allow="autoplay" style={{ border: 'none', minHeight: '60vh', flexGrow: 1 }} allowFullScreen></iframe> :
+              item.video ?
+                <video src={item.video} controls autoPlay className="lightbox__video" style={{ maxWidth: '100%', maxHeight: '100%' }} /> :
+                (item.img ?
+                  <img src={item.img} alt="" className="lightbox__img" /> :
+                  <div className={"tile__art " + (item.art || "")}>{item.label.split('·')[0].trim()}</div>
+                )
             ) :
             <DashArt kind={item.kind} />
           }
