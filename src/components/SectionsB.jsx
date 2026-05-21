@@ -37,7 +37,15 @@ const PORTFOLIO = [
   { id: 'p40', cat: 'activations', label: 'BAC · Workshop', img: '/assets/portfolio/activaciones/562795433_18064815920587648_3872430261450459819_n.webp', span: 'wide', hideFromAll: true },
   { id: 'p41', cat: 'activations', label: 'BAC · Workshop', img: '/assets/portfolio/activaciones/562860414_18064815911587648_1403026327103440349_n.webp', hideFromAll: true },
   { id: 'p42', cat: 'activations', label: 'BAC · Workshop', img: '/assets/portfolio/activaciones/563751639_18064815929587648_1441748058425124453_n.webp', hideFromAll: true },
-  { id: 'p45', cat: 'activations', label: 'Hi-Tec · Lanzamiento Guatemala', driveUrl: 'https://drive.google.com/file/d/1NTfvXmIXRuIksngQslPLHfbhTteyR4RC/preview', img: '/assets/portfolio/activaciones/hitec1-preview.png', span: 'tall' }
+  { id: 'p45', cat: 'activations', label: 'Hi-Tec · Lanzamiento Guatemala', driveUrl: 'https://drive.google.com/file/d/1NTfvXmIXRuIksngQslPLHfbhTteyR4RC/preview', img: '/assets/portfolio/activaciones/hitec1-preview.png', span: 'tall' },
+  { id: 'p46', cat: 'activations', label: "JB's Burgers · Event Matsuri", img: '/assets/portfolio/activaciones/MATSURI/DSC08695.JPG' },
+  { id: 'p47', cat: 'activations', label: "JB's Burgers · Event Matsuri", img: '/assets/portfolio/activaciones/MATSURI/DSC08676.JPG', span: 'tall', hideFromAll: true },
+  { id: 'p48', cat: 'activations', label: "JB's Burgers · Event Matsuri", img: '/assets/portfolio/activaciones/MATSURI/DSC00915.png', hideFromAll: true },
+  { id: 'p49', cat: 'activations', label: "JB's Burgers · Event Matsuri", img: '/assets/portfolio/activaciones/MATSURI/Copy%20of%20DSC00882.png', span: 'wide', hideFromAll: true },
+  { id: 'p50', cat: 'activations', label: "JB's Burgers · Event Matsuri", img: '/assets/portfolio/activaciones/MATSURI/Copy%20of%20DSC00872.png', hideFromAll: true },
+  { id: 'p51', cat: 'activations', label: "JB's Burgers · Event Matsuri", img: '/assets/portfolio/activaciones/MATSURI/Copy%20of%20DSC00870.png', span: 'tall', hideFromAll: true },
+  { id: 'p52', cat: 'activations', label: "JB's Burgers · Event Matsuri", img: '/assets/portfolio/activaciones/MATSURI/Copy%20of%20DSC00869%20(1).png', hideFromAll: true },
+  { id: 'p53', cat: 'av', label: 'Isolina · Brand Video', driveUrl: 'https://drive.google.com/file/d/1909yBTgcIUYZsMUFESaQ2RT65cvFJN3O/preview', img: '/assets/portfolio/audiovisual/isolina-preview.png', span: 'tall' }
 ];
 
 const FILTERS = [
