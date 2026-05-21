@@ -204,9 +204,9 @@ export function DashArt({ kind = 'bars' }) {
 export function Dashboards({ lang, openLightbox }) {
   const ref = useReveal();
   const dashes = [
-    { id: 'd5', tRaw: 'Masividad', sRaw: 'Meta Ads', kind: 'img', img: '/assets/portfolio/meta/meta1.jpeg', metric: { v: '2,095', label: { en: 'CONVERSACIONES INICIADAS', es: 'CONVERSACIONES INICIADAS' } } },
-    { id: 'd6', tRaw: 'Conversiones · High Ticket', sRaw: 'Meta Ads', kind: 'img', img: '/assets/portfolio/meta/meta2.jpeg', metric: { v: '$12.37', label: { en: 'COSTO POR LEAD', es: 'COSTO POR LEAD' } } },
-    { id: 'd7', tRaw: 'Conversiones · High Ticket', sRaw: 'Google Ads', kind: 'img', img: '/assets/portfolio/meta/meta3.png', metric: { v: '52 CONVERSIONES', label: { en: '· $185 CPL', es: '· $185 CPL' } } }
+    { id: 'd5', tRaw: 'Masividad', sRaw: 'Meta Ads', kind: 'img', img: '/assets/portfolio/meta/meta1.jpg', metric: { v: '2,095', label: { en: 'CONVERSACIONES INICIADAS', es: 'CONVERSACIONES INICIADAS' } } },
+    { id: 'd6', tRaw: 'Conversiones · High Ticket', sRaw: 'Meta Ads', kind: 'img', img: '/assets/portfolio/meta/meta2.jpg', metric: { v: '$12.37', label: { en: 'COSTO POR LEAD', es: 'COSTO POR LEAD' } } },
+    { id: 'd7', tRaw: 'Conversiones · High Ticket', sRaw: 'Google Ads', kind: 'img', img: '/assets/portfolio/meta/meta3.jpg', metric: { v: '52 CONVERSIONES', label: { en: '· $185 CPL', es: '· $185 CPL' } } }
   ];
 
   return (
