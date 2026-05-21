@@ -248,11 +248,7 @@ export function Social({ lang }) {
     { q: 't5_quote', n: 't5_name', r: 't5_role', s: 't5_stat', link: 'https://www.instagram.com/innoviahealthcare/' },
     { q: 't6_quote', n: 't6_name', r: 't6_role', s: 't6_stat', link: 'https://www.instagram.com/hitec_cr/' },
     { q: 't7_quote', n: 't7_name', r: 't7_role', s: 't7_stat', link: 'https://www.instagram.com/funinaboxcr/' },
-    {
-      q: 't8_quote', n: 't8_name', r: 't8_role', s: 't8_stat',
-      link: 'https://www.instagram.com/clinicaddsdentalcr/',
-      linkLabel: 'DDS Dental'
-    },
+    { q: 't8_quote', n: 't8_name', r: 't8_role', s: 't8_stat', link: 'https://www.instagram.com/clinicaddsdentalcr/' },
     { q: 't9_quote', n: 't9_name', r: 't9_role', s: 't9_stat', link: 'https://www.instagram.com/umifemcr/' },
     { q: 't10_quote', n: 't10_name', r: 't10_role', s: 't10_stat', link: 'https://www.instagram.com/casapittiercr/' },
     { q: 't11_quote', n: 't11_name', r: 't11_role', s: 't11_stat', link: 'https://www.instagram.com/frutinsacr/' },

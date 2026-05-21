@@ -186,7 +186,7 @@ export const COPY = {
     es: "El Grupo Prada ha estado trabajando con Duck Studios desde el inicio del año y hemos tenido una experiencia perfecta. Su orden, estructura, seguimiento minucioso de temas y metodología de reuniones hacen que trabajar con ellos sea sumamente fluido. Es un aliado estratégico con el que se genera muchísima sinergia. Actualmente tres de nuestras empresas colaboran con ellos y todo el personal está encantado con el desempeño de Duck Studios. ¡Altamente recomendados!"
   },
   t8_name: { en: "Antonio Prada", es: "Antonio Prada" },
-  t8_role: { en: "General Manager · Grupo Prada", es: "Gerente General · Grupo Prada" },
+  t8_role: { en: "General Manager · DDS Dental", es: "Gerente General · DDS Dental" },
   t8_stat: { en: "Perfect Synergy", es: "Sinergia Perfecta" },
 
   t9_quote: {
