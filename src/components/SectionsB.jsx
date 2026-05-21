@@ -238,15 +238,13 @@ export function Social({ lang }) {
     { q: 't7_quote', n: 't7_name', r: 't7_role', s: 't7_stat', link: 'https://www.instagram.com/funinaboxcr/' },
     {
       q: 't8_quote', n: 't8_name', r: 't8_role', s: 't8_stat',
-      links: [
-        { label: 'Prada Lab', url: 'https://www.instagram.com/pradalabcr/' },
-        { label: 'Prada Dent', url: 'https://www.instagram.com/pradadent/' }
-      ]
+      link: 'https://www.instagram.com/clinicaddsdentalcr/',
+      linkLabel: 'DDS Dental'
     },
     { q: 't9_quote', n: 't9_name', r: 't9_role', s: 't9_stat', link: 'https://www.instagram.com/umifemcr/' },
     { q: 't10_quote', n: 't10_name', r: 't10_role', s: 't10_stat', link: 'https://www.instagram.com/drope2886/' },
     { q: 't11_quote', n: 't11_name', r: 't11_role', s: 't11_stat', link: 'https://www.instagram.com/wmonge01/' },
-    { q: 't12_quote', n: 't12_name', r: 't12_role', s: 't12_stat', link: 'https://www.instagram.com/figuerana/' }
+    { q: 't12_quote', n: 't12_name', r: 't12_role', s: 't12_stat', link: 'https://www.instagram.com/stattooscr/' }
   ];
   const visibleTs = showAll ? ts : ts.slice(0, 4);
 
@@ -297,6 +295,14 @@ export function Social({ lang }) {
                           </React.Fragment>
                         ))}
                       </span>
+                    </>
+                  ) : x.link && x.linkLabel ? (
+                    <>
+                      <span>{t(x.n, lang)}</span>
+                      <span className="testimonial__author-sep"> · </span>
+                      <a href={x.link} target="_blank" rel="noopener noreferrer" className="testimonial__link">
+                        {x.linkLabel}
+                      </a>
                     </>
                   ) : x.link ? (
                     <a href={x.link} target="_blank" rel="noopener noreferrer" className="testimonial__link">

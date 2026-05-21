@@ -83,7 +83,7 @@ export const COPY = {
   story1_r: { en: "Generated +6K leads and reached +30M impressions across social media.", es: "Generó +6K leads y alcanzó +30M de impresiones en redes sociales." },
 
   story2_client: { en: "Fun in a Box", es: "Fun in a Box" },
-  story2_industry: { en: "E-commerce", es: "E-commerce" },
+  story2_industry: { en: "E-Commerce & Retail", es: "E-Commerce & Retail" },
   story2_h: { en: "Viral success that optimized sales and load times.", es: "Éxito viral que optimizó ventas y tiempos de carga." },
   story2_r: { en: "Achieved a 40% sales increase and 76% faster site performance.", es: "Logró un aumento del 40% en ventas y un sitio 76% más rápido." },
 
@@ -141,7 +141,7 @@ export const COPY = {
     es: "Desde mediados de 2024 hemos tenido la dicha de trabajar con un equipo que realmente ha marcado la diferencia para Prada Dent. Más que un servicio, hemos encontrado en ellos personas sumamente comprometidas, creativas y con un interés real por nuestro crecimiento. Nos han acompañado con paciencia, profesionalismo y un trato humano excepcional que se alinea con nuestros valores de marca. Cada propuesta y cada detalle ha fortalecido nuestra presencia e identidad. Para nosotros, Duck Studios es una parte fundamental del camino que estamos construyendo."
   },
   t3_name: { en: "Prada Dent", es: "Prada Dent" },
-  t3_role: { en: "Dental Clinic", es: "Clínica Dental" },
+  t3_role: { en: "Dental Depot", es: "Depósito Dental" },
   t3_stat: { en: "Trusted Partnership", es: "Alianza de Confianza" },
 
   t4_quote: {
@@ -173,7 +173,7 @@ export const COPY = {
     es: "La asesoría de Duck Studios ha sido de 10. Más allá del marketing, nos ayudaron a automatizar y simplificar nuestros procesos internos, sistematizando nuestros controles para llevarlos a otro nivel. Estamos sumamente contentos con el valor agregado que aportan a nuestras operaciones diarias. Trabajar con el equipo es muy fácil; su estructura de trabajo facilita enormemente la comunicación y el desarrollo de nuevas iniciativas."
   },
   t7_name: { en: "Fun in a Box", es: "Fun in a Box" },
-  t7_role: { en: "Toy Store & Events", es: "Juguetería y Eventos" },
+  t7_role: { en: "Toy Store", es: "Juguetería" },
   t7_stat: { en: "10/10 Operations", es: "Operaciones 10/10" },
 
   t8_quote: {
@@ -181,7 +181,7 @@ export const COPY = {
     es: "El Grupo Prada ha estado trabajando con Duck Studios desde el inicio del año y hemos tenido una experiencia perfecta. Su orden, estructura, seguimiento minucioso de temas y metodología de reuniones hacen que trabajar con ellos sea sumamente fluido. Es un aliado estratégico con el que se genera muchísima sinergia. Actualmente tres de nuestras empresas colaboran con ellos y todo el personal está encantado con el desempeño de Duck Studios. ¡Altamente recomendados!"
   },
   t8_name: { en: "Antonio Prada", es: "Antonio Prada" },
-  t8_role: { en: "CEO · El Grupo Prada", es: "CEO · El Grupo Prada" },
+  t8_role: { en: "General Manager · Grupo Prada", es: "Gerente General · Grupo Prada" },
   t8_stat: { en: "Perfect Synergy", es: "Sinergia Perfecta" },
 
   t9_quote: {
@@ -197,7 +197,7 @@ export const COPY = {
     es: "Duck Studios llegó en un momento oportuno de cambios e innovación. Después de analizar varias alternativas, tomamos la decisión de trabajar juntos y ha sido una excelente elección. Son sumamente profesionales, organizados y cuentan con un gran equipo humano. Estoy muy agradecido por el extraordinario servicio que nos brindan."
   },
   t10_name: { en: "Pedro Martínez", es: "Pedro Martínez" },
-  t10_role: { en: "Digital Innovation", es: "Innovación Digital" },
+  t10_role: { en: "Casa Pittier", es: "Casa Pittier" },
   t10_stat: { en: "Outstanding Service", es: "Servicio Sobresaliente" },
 
   t11_quote: {
@@ -205,16 +205,16 @@ export const COPY = {
     es: "He trabajado de la mano con Duck Studios y el resultado ha sido excelente. ¡Me siento sumamente satisfecho con la dedicación y el extraordinario servicio brindado!"
   },
   t11_name: { en: "Alfonso Monge", es: "Alfonso Monge" },
-  t11_role: { en: "Strategic Collaboration", es: "Colaboración Estratégica" },
+  t11_role: { en: "Frutinsa", es: "Frutinsa" },
   t11_stat: { en: "Highly Satisfied", es: "Muy Satisfecho" },
 
   t12_quote: {
-    en: "Our experience with Duck Studios has been incredible. Their magical energy, guidance, creativity, and constant support throughout our entire website development process far exceeded our expectations 😍. We feel they are part of our family and look forward to continuing to grow together! 🐥❤️✨",
-    es: "Nuestra experiencia con Duck Studios ha sido increíble. Su mágica energía, asesoría, creatividad y el constante acompañamiento durante todo el desarrollo de nuestro sitio web superaron por mucho nuestras expectativas 😍. Los sentimos parte de nuestra familia y queremos seguir creciendo juntos. 🐥❤️✨"
+    en: "Our experience with Duck Studios has been more than positive. From the start, the guidance, the team's dedication, and the constant support made a huge difference. The empathy and commitment they bring is hard to find today, even in established businesses like ours. They've managed to channel our energy toward what we truly needed, achieving great results in both the short and medium term. What we value most is that they genuinely care about sales and business growth — not just creating content for content's sake. They get truly involved in the brand's goals and work with real results in mind. We highly recommend them and have a great deal of affection for them 🫰🏻",
+    es: "Nuestra experiencia con Duck Studios ha sido más que positiva. Desde el inicio, la asesoría, la disposición de todo el equipo y el acompañamiento constante marcaron una gran diferencia. La empatía y el compromiso que brindan es algo difícil de encontrar hoy en día, incluso en negocios establecidos y con trayectoria como el nuestro. Los chicos han sabido acomodar, ayudar y canalizar nuestras energías hacia lo que realmente necesitábamos, logrando muy buenos resultados tanto a corto como a mediano plazo. Algo que valoramos muchísimo es que realmente les interesan las ventas y el crecimiento del negocio, no solo crear contenido por crear. Se involucran de verdad en los objetivos de la marca y trabajan pensando en resultados reales. Realmente los recomendamos muchísimo y les tenemos un enorme cariño 🫰🏻"
   },
-  t12_name: { en: "Natascha Figuera", es: "Natascha Figuera" },
-  t12_role: { en: "Creative Partner", es: "Aliada Creativa" },
-  t12_stat: { en: "Exceeded Expectations", es: "Superó Expectativas" },
+  t12_name: { en: "Stattoos Tattoo & Piercing Shop", es: "Stattoos Tattoo & Piercing Shop" },
+  t12_role: { en: "Tattoo & Piercing Studio", es: "Estudio de Tattoo & Piercing" },
+  t12_stat: { en: "Real Results", es: "Resultados Reales" },
 
   social_show_more: { en: "Show more testimonials", es: "Ver más testimonios" },
   social_show_less: { en: "Show less", es: "Ver menos" },
@@ -227,7 +227,7 @@ export const COPY = {
   q1_a: { en: "90-day sprints, month-to-month after. No long-term lock-in until the results are on the table.", es: "Sprints de 90 días, luego mes a mes. Sin contratos largos hasta tener los resultados en la mesa." },
 
   q2_q: { en: "How is this cheaper than hiring in-house?", es: "¿Por qué es más barato que contratar internamente?" },
-  q2_a: { en: "Four senior specialists, one contract, one invoice. Less than a single mid-level hire — fully loaded.", es: "Cuatro especialistas senior, un contrato, una factura. Menos que un perfil intermedio — con cargas incluidas." },
+  q2_a: { en: "A team of 7 specialists, one contract, one invoice. All the power of a complete marketing department, for a fraction of what it costs to build in-house.", es: "Un equipo de 7 especialistas, un contrato, una factura. Todo el poder de un departamento de mercadeo completo, por una fracción de lo que cuesta construirlo in-house." },
 
   q3_q: { en: "How do we know the numbers are real?", es: "¿Cómo sabemos que los números son reales?" },
   q3_a: { en: "Direct ad account & analytics access from day one. You see what we see, when we see it.", es: "Acceso directo a cuentas de anuncios y analytics desde el día uno. Ves lo mismo que nosotros, al mismo tiempo." },
@@ -254,10 +254,8 @@ export const INDUSTRIES = [
   { en: "Consumer Goods", es: "Consumo masivo" },
   { en: "B2B SaaS", es: "B2B SaaS" },
   { en: "Retail / DTC", es: "Retail / DTC" },
-  { en: "Real Estate", es: "Bienes raíces" },
   { en: "Health & Wellness", es: "Salud y bienestar" },
-  { en: "Financial Services", es: "Servicios financieros" },
-  { en: "Education", es: "Educación" },
+  { en: "Fast Food & Restaurants", es: "Comida rápida y restaurantes" },
 ];
 
 export const t = (key, lang) => (COPY[key] && COPY[key][lang]) || (COPY[key] && COPY[key].en) || key;
