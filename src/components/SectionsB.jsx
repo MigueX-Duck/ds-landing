@@ -112,7 +112,7 @@ export function Stories({ lang }) {
   const stories = [
     {
       client: 'story1_client', industry: 'story1_industry', h: 'story1_h', r: 'story1_r',
-      metrics: [{ v: 6, suf: 'K+', label: { en: 'leads generated', es: 'leads generados' } }, { v: 17, suf: '%', label: { en: 'conv. rate', es: 'tasa conv.' } }, { v: 30, suf: 'M+', label: { en: 'impressions', es: 'impresiones' } }]
+      metrics: [{ v: 30, suf: 'M+', label: { en: 'impressions', es: 'impresiones' } }]
     },
     {
       client: 'story2_client', industry: 'story2_industry', h: 'story2_h', r: 'story2_r',
@@ -125,6 +125,14 @@ export function Stories({ lang }) {
     {
       client: 'story4_client', industry: 'story4_industry', h: 'story4_h', r: 'story4_r',
       metrics: [{ v: 8.9, suf: 'M', label: { en: 'impressions', es: 'impresiones' } }, { v: 532, suf: '%', label: { en: 'reels growth', es: 'crecimiento reels' } }, { v: 212, suf: '%', label: { en: 'CTR increase', es: 'aumento CTR' } }]
+    },
+    {
+      client: 'story5_client', industry: 'story5_industry', h: 'story5_h', r: 'story5_r',
+      metrics: [
+        { v: 70, suf: '%', label: { en: 'revenue increase', es: 'aumento de ingresos' } },
+        { text: { en: 'Sales process restructured', es: 'Proceso de ventas reestructurado' } },
+        { text: { en: 'CRM implemented', es: 'CRM implementado' } }
+      ]
     }
   ];
 
@@ -143,14 +151,18 @@ export function Stories({ lang }) {
                 <span className="story__industry">{t(s.industry, lang)}</span>
               </div>
               <h3 className="story__headline">{t(s.h, lang)}</h3>
-              <div className="metric-pills">
-                {s.metrics.map((m, j) =>
-                  <span key={j} className="metric-pill">
-                    <CounterOnScroll target={m.v} suffix={m.suf} />
-                    <span className="label">{m.label[lang]}</span>
-                  </span>
-                )}
-              </div>
+              {s.metrics.length > 0 && (
+                <div className="metric-pills">
+                  {s.metrics.map((m, j) =>
+                    <span key={j} className="metric-pill">
+                      {m.text
+                        ? <span className="label">{m.text[lang]}</span>
+                        : <><CounterOnScroll target={m.v} suffix={m.suf} /><span className="label">{m.label[lang]}</span></>
+                      }
+                    </span>
+                  )}
+                </div>
+              )}
               <p className="story__result">"{t(s.r, lang)}"</p>
             </article>
           )}

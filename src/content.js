@@ -97,6 +97,11 @@ export const COPY = {
   story4_h: { en: "Repositioning a heritage brand for the modern market.", es: "Reposicionando una marca de herencia para el mercado moderno." },
   story4_r: { en: "8.9M total impressions and +532% Reels interaction growth.", es: "8.9M de impresiones totales y +532% de crecimiento en Reels." },
 
+  story5_client: { en: "Stattoos", es: "Stattoos" },
+  story5_industry: { en: "Retail / Tattoo Studios", es: "Retail / Estudios de Tatuajes" },
+  story5_h: { en: "From declining revenue to consistent growth in 6 months.", es: "De ingresos a la baja a crecimiento sostenido en 6 meses." },
+  story5_r: { en: "Reorganized the sales team, implemented CRM and training programs — growing monthly revenue by 70%.", es: "Reorganizamos el equipo de ventas, implementamos CRM y programas de capacitación — aumentando los ingresos mensuales un 70%." },
+
   // 06 Dashboards
   dash_eyebrow: { en: "05 · Campaign results", es: "05 · Resultados de campañas" },
   dash_h: { en: "The dashboards don't lie.", es: "Los dashboards no mienten." },
