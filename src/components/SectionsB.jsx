@@ -244,7 +244,7 @@ export function Social({ lang }) {
     { q: 't1_quote', n: 't1_name', r: 't1_role', s: 't1_stat', link: 'https://www.instagram.com/peperonnisexpresscr/' },
     { q: 't2_quote', n: 't2_name', r: 't2_role', s: 't2_stat', link: 'https://www.instagram.com/pradalabcr/' },
     { q: 't3_quote', n: 't3_name', r: 't3_role', s: 't3_stat', link: 'https://www.instagram.com/pradadent/' },
-    { q: 't4_quote', n: 't4_name', r: 't4_role', s: 't4_stat', link: 'https://www.instagram.com/allanghm/' },
+    { q: 't4_quote', n: 't4_name', r: 't4_role', s: 't4_stat', link: 'https://www.instagram.com/colchonescoruna/' },
     { q: 't5_quote', n: 't5_name', r: 't5_role', s: 't5_stat', link: 'https://www.instagram.com/innoviahealthcare/' },
     { q: 't6_quote', n: 't6_name', r: 't6_role', s: 't6_stat', link: 'https://www.instagram.com/hitec_cr/' },
     { q: 't7_quote', n: 't7_name', r: 't7_role', s: 't7_stat', link: 'https://www.instagram.com/funinaboxcr/' },
@@ -254,8 +254,8 @@ export function Social({ lang }) {
       linkLabel: 'DDS Dental'
     },
     { q: 't9_quote', n: 't9_name', r: 't9_role', s: 't9_stat', link: 'https://www.instagram.com/umifemcr/' },
-    { q: 't10_quote', n: 't10_name', r: 't10_role', s: 't10_stat', link: 'https://www.instagram.com/drope2886/' },
-    { q: 't11_quote', n: 't11_name', r: 't11_role', s: 't11_stat', link: 'https://www.instagram.com/wmonge01/' },
+    { q: 't10_quote', n: 't10_name', r: 't10_role', s: 't10_stat', link: 'https://www.instagram.com/casapittiercr/' },
+    { q: 't11_quote', n: 't11_name', r: 't11_role', s: 't11_stat', link: 'https://www.instagram.com/frutinsacr/' },
     { q: 't12_quote', n: 't12_name', r: 't12_role', s: 't12_stat', link: 'https://www.instagram.com/stattooscr/' }
   ];
   const visibleTs = showAll ? ts : ts.slice(0, 4);
